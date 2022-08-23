@@ -33,11 +33,12 @@ function Hero() {
           marginBottom="12px"
           color="fonts.main"
         >
-          Full Stack Developer, currently located in Surat, India. Looking for my first opportunity in the web development area.
+          Full Stack Developer, currently located in Surat, India. 
+          Looking for my first opportunity in the web development area.
         </Text>
         <Link href="/contato" className="contato">
           <Text tag="span" variant="paragraph2" color="fonts.main">
-            Contact 
+            Contact
           </Text>
         </Link>
       </TextContainer>
