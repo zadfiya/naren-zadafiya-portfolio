@@ -9,7 +9,6 @@ module.exports = {
     'plugin:react/recommended',
     'airbnb',
     'plugin:cypress/recommended',
-    'plugin:@next/next/recommended',
   ],
   parserOptions: {
     ecmaFeatures: {
