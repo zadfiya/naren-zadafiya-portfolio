@@ -36,17 +36,16 @@ const formStates = { // TODO
 const contactSchema = yup.object().shape({
   nome: yup
     .string()
-    .required('Nome é obrigatório')
-    .min(3, 'Preencha ao menos 3 caracteres'),
+    .required('name is required')
+    .min(3, 'Please fill in at least 3 characters'),
   email: yup
     .string()
-    .email('Email precisa ser válido')
-    .required('Email é obrigatório')
-    .min(10, 'Preencha ao menos 10 caracteres'),
+    .email('Email must be valid')
+    .required('Email is required'),
   mensagem: yup
     .string()
-    .required('Mensagem é obrigatória')
-    .min(3, 'Preencha ao menos 3 caracteres'),
+    .required('Message is mandatory')
+    .min(10, 'Please fill in at least 10 characters'),
 });
 
 function FormContent({ onSubmit, setModalState }) {
@@ -101,20 +100,20 @@ function FormContent({ onSubmit, setModalState }) {
         tag="h1"
         color="fonts.main"
       >
-        Obrigada pela visita 😄
+        Thank you for your visit 😄
       </Text>
       <Text
         variant="paragraph2"
         tag="p"
         marginBottom="32px"
       >
-        Deixe uma mensagem que entrarei em contato.
+        Leave a message and I'll be in touch.
       </Text>
 
       <TextField
-        label="Nome"
+        label="Name"
         name="nome"
-        placeholder="nome"
+        placeholder="Your Sweet Name"
         type="text"
         value={form.values.nome}
         onChange={form.handleChange}
@@ -126,7 +125,7 @@ function FormContent({ onSubmit, setModalState }) {
       <TextField
         label="Email"
         name="email"
-        placeholder="email@dominio.com"
+        placeholder="Your E-mail address"
         type="email"
         value={form.values.email}
         onChange={form.handleChange}
@@ -136,9 +135,9 @@ function FormContent({ onSubmit, setModalState }) {
       />
 
       <TextField
-        label="Mensagem"
+        label="Message"
         name="mensagem"
-        placeholder="mande sua mensagem"
+        placeholder="Write your message"
         type="text"
         value={form.values.mensagem}
         onChange={form.handleChange}
@@ -153,7 +152,7 @@ function FormContent({ onSubmit, setModalState }) {
         fullWidth
         disabled={form.isFormDisabled}
       >
-        Enviar mensagem
+        Send Message
       </Button>
 
       {submissionStatus === formStates.DONE && ( // TODO

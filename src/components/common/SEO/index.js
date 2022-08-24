@@ -3,14 +3,14 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 
 function SEO({ headTitle }) {
-  const pageTitleDefault = 'Portfolio';
+  const pageTitleDefault = 'Naren Portfolio';
   const hasHeadTitle = Boolean(headTitle);
   const title = hasHeadTitle
     ? (`${headTitle} | ${pageTitleDefault}`)
     : (pageTitleDefault);
-  const url = 'https://carol-portfolio.vercel.app/';
-  const image = 'https://i.postimg.cc/MGYnPDGf/PORTFOLIO-Home.png';
-  const description = 'Confira meu Portfolio!';
+  const url = 'https://naren-zadafiya-portfolio.vercel.app/';
+  const image = 'https://i.postimg.cc/RZRVSN6v/personal-portfolio.jpg';
+  const description = 'Check Out My Portfolio!';
 
   return (
     <Head>

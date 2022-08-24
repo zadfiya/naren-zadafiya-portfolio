@@ -24,14 +24,14 @@ function Contato() {
       <ContatoModal>
         <Button
           id="button"
-          title="Vamos conversar?"
+          title="Let's talk?"
           ghost
           onClick={() => {
             setModalState(!isModalOpen); // novo state sendo atribuido
           }}
         >
           <Text tag="p" id="contato" variant="titleXS" color="fonts.main">
-            Vamos conversar?
+            Let's talk?
           </Text>
         </Button>
       </ContatoModal>
@@ -43,11 +43,11 @@ function Contato() {
           md: 'space-between',
         }}
       >
-        <Text tag="p" variant="paragraph3">Redes Sociais</Text>
+        <Text tag="p" variant="paragraph3">Social Networks</Text>
         <RedesSociais>
           <Text
             tag="a"
-            href="https://www.linkedin.com/in/carolandrade1/"
+            href="https://www.linkedin.com/in/naren-zadafiya/"
             variant="paragraph1XS"
             target="_blank"
             rel="noopener noreferrer"
@@ -58,7 +58,7 @@ function Contato() {
           </Text>
           <Text
             tag="a"
-            href="https://github.com/carolandrade1"
+            href="https://github.com/zadfiya"
             variant="paragraph1XS"
             target="_blank"
             rel="noopener noreferrer"
@@ -67,7 +67,7 @@ function Contato() {
           >
             Github
           </Text>
-          <Text
+          {/* <Text
             tag="a"
             href="https://codepen.io/carolandrade1"
             variant="paragraph1XS"
@@ -77,7 +77,7 @@ function Contato() {
             color="fonts.main"
           >
             Codepen
-          </Text>
+          </Text> */}
         </RedesSociais>
       </Box>
     </ContainerContato>

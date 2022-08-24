@@ -2,7 +2,7 @@ export default class ContactScreenPageObject {
   constructor(cy) {
     this.cy = cy;
 
-    this.cy.visit('/contato');
+    this.cy.visit('/contact');
   }
 
   callModalForm() {
