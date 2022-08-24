@@ -1,3 +1,4 @@
+/* 
 import React from 'react';
 import PropTypes from 'prop-types';
 import CasePortfolio, { getContent } from '../../src/components/screens/casePortfolio';
@@ -31,3 +32,5 @@ export async function getStaticProps() {
     },
   };
 }
+
+*/

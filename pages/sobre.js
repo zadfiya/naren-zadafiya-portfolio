@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import PropTypes from 'prop-types';
 import Sobre, { getContent } from '../src/components/screens/sobre/sobre';
 import websitePageHOC from '../src/components/wrappers/websitePage/hoc';
@@ -31,3 +31,4 @@ export async function getStaticProps() {
     },
   };
 }
+*/
