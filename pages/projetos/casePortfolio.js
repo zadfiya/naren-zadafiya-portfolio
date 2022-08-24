@@ -31,6 +31,4 @@ export async function getStaticProps() {
       messages,
     },
   };
-}
-
-*/
+} */
