@@ -31,7 +31,7 @@ function Contato() {
           }}
         >
           <Text tag="p" id="contato" variant="titleXS" color="fonts.main">
-          {title}
+            {title}
           </Text>
         </Button>
       </ContatoModal>
