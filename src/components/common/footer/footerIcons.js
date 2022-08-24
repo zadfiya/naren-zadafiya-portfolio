@@ -35,7 +35,7 @@ function FooterIcons() {
           <path d="M2 15.5L12 8.5L22 15.5" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           <path d="M12 2V8.5" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
-        </Text>
+      </Text>
     </Box>
   );
 }
