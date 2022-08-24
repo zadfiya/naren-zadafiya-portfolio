@@ -11,7 +11,7 @@ function HomeScreen() {
 export default websitePageHOC(HomeScreen, {
   pageWrapperProps: {
     seoProps: {
-      headTitle: 'Home',
+      headTitle: 'Home | Naren',
     },
   },
 });

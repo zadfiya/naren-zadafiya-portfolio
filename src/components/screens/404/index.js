@@ -9,7 +9,7 @@ function NotFound() {
         <img src="/images/erro404.svg" alt="" />
       </Erro>
       <GoBack>
-        <Button href="/" className="voltar">Voltar ao inicio</Button>
+        <Button href="/" className="voltar">Back to start</Button>
         <img src="/images/dontsee.webp" alt="Você não viu nada!" />
       </GoBack>
     </Container404>

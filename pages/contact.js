@@ -11,7 +11,7 @@ function ContatoScreen() {
 export default websitePageHOC(ContatoScreen, {
   pageWrapperProps: {
     seoProps: {
-      headTitle: 'Contato',
+      headTitle: 'Contact Naren',
     },
   },
 });

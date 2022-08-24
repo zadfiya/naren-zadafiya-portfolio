@@ -11,7 +11,7 @@ function NotFoundScreen() {
 export default websitePageHOC(NotFoundScreen, {
   pageWrapperProps: {
     seoProps: {
-      headTitle: 'Página 404',
+      headTitle: 'Page not found 404',
     },
   },
 });

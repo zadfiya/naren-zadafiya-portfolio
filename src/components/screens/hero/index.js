@@ -34,9 +34,9 @@ function Hero() {
           color="fonts.main"
         >
           Full Stack Developer, currently located in Surat, India.
-          Looking for my first opportunity in the web development area.
+          Looking for work my first opportunity in the web development area.
         </Text>
-        <Link href="/contato" className="contato">
+        <Link href="/contact" className="contato">
           <Text tag="span" variant="paragraph2" color="fonts.main">
             Contact
           </Text>

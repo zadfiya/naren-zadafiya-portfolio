@@ -4,7 +4,7 @@ import Link from '../../../common/link/link';
 import breakpointsMedia from '../../../../theme/util/breakpoints/breakpoints';
 
 const ContainerCircle = () => (
-  <Link href="/projetos" className="circlelink" title="Mostrar projetos">
+  <Link href="/projects" className="circlelink" title="Show projects">
     <svg
       className="circle"
       viewBox="0 0 252 252"

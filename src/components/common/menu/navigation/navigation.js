@@ -10,15 +10,15 @@ const links = [
     url: '/',
   },
   {
-    texto: 'Sobre',
+    texto: 'About Me',
     url: '/sobre',
   },
   {
-    texto: 'Projetos',
-    url: '/projetos',
+    texto: 'Projects',
+    url: '/projects',
   },
   {
-    texto: 'Contato',
+    texto: 'Contact Me',
     url: '/contato',
   },
 ];

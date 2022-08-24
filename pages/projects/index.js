@@ -14,7 +14,7 @@ ProjetoScreen.defaultProps = {};
 export default websitePageHOC(ProjetoScreen, {
   pageWrapperProps: {
     seoProps: {
-      headTitle: 'Projetos',
+      headTitle: 'Projects',
     },
   },
 });
