@@ -11,7 +11,7 @@ const links = [
   },
   {
     texto: 'About Me',
-    url: '/aboutme',
+    url: '/about',
   },
   {
     texto: 'Projects',
