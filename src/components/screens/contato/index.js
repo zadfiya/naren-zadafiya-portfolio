@@ -31,7 +31,7 @@ function Contato() {
           }}
         >
           <Text tag="p" id="contato" variant="titleXS" color="fonts.main">
-            Let's talk?
+            Let&aposs talk?
           </Text>
         </Button>
       </ContatoModal>

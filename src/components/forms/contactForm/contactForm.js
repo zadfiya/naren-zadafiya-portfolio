@@ -107,7 +107,7 @@ function FormContent({ onSubmit, setModalState }) {
         tag="p"
         marginBottom="32px"
       >
-        Leave a message and I'll be in touch.
+        Leave a message and I&aposll be in touch.
       </Text>
 
       <TextField

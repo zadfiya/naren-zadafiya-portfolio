@@ -27,7 +27,7 @@ function FooterIcons() {
           </defs>
         </svg>
       </Text>
-      {/* <Text tag="a" padding="5px" href="https://codepen.io/carolandrade1" target="_blank" rel="noopener noreferrer" title="Codepen" color="fonts.main">
+      <Text tag="a" padding="5px" href="https://codepen.io" target="_blank" rel="noopener noreferrer" title="Codepen" color="fonts.main">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 2L22 8.5V15.5L12 22L2 15.5V8.5L12 2Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           <path d="M12 22V15.5" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -35,7 +35,7 @@ function FooterIcons() {
           <path d="M2 15.5L12 8.5L22 15.5" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           <path d="M12 2V8.5" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
-        </Text> */}
+        </Text>
     </Box>
   );
 }
