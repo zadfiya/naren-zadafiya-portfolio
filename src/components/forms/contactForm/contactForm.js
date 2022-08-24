@@ -55,7 +55,7 @@ function FormContent({ onSubmit, setModalState }) {
     email: '',
     mensagem: '',
   };
-  const [description,setDescription] = React.useState("Leave a message and I'll be in touch.")
+  const description = "Leave a message and I'll be in touch.";
   const form = useForm({
     initialValues,
     onSubmit: (values) => {

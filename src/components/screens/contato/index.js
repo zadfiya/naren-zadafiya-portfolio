@@ -8,7 +8,7 @@ import ContactForm from '../../forms/contactForm/contactForm';
 
 function Contato() {
   const [isModalOpen, setModalState] = React.useState(false);
-  const [title,setTitle] = React.useState("Let's Talk")
+  const title = "Let's Talk";
   return (
     <ContainerContato>
       <Modal
