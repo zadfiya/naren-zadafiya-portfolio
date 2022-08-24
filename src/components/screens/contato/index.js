@@ -8,7 +8,7 @@ import ContactForm from '../../forms/contactForm/contactForm';
 
 function Contato() {
   const [isModalOpen, setModalState] = React.useState(false);
-
+  const [title,setTitle] = React.useState("Let's Talk")
   return (
     <ContainerContato>
       <Modal
@@ -31,7 +31,7 @@ function Contato() {
           }}
         >
           <Text tag="p" id="contato" variant="titleXS" color="fonts.main">
-            Let&aposs talk?
+           {title}
           </Text>
         </Button>
       </ContatoModal>
