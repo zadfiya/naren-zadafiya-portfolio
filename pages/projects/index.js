@@ -20,7 +20,7 @@ export default websitePageHOC(ProjetoScreen, {
 });
 
 export async function getStaticProps() {
-  const repositorios = await fetch('https://api.github.com/users/carolandrade1/repos')
+  const repositorios = await fetch('https://api.github.com/users/zadfiya/repos')
     .then((respostaDoServer) => respostaDoServer.json());
   return {
     props: {

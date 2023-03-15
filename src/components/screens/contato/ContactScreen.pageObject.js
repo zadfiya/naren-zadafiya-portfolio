@@ -13,9 +13,9 @@ export default class ContactScreenPageObject {
 
   fillContactForm({ name, email, message }) {
     // encontrar e preencher input Nome (erro, Text também com o name=nome dentro do TextField)
-    this.cy.get('#contactForm input[name=nome]').type(name);
+    this.cy.get('#contactForm input[name=name]').type(name);
     this.cy.get('#contactForm input[name=email]').type(email);
-    this.cy.get('#contactForm input[name=mensagem]').type(message);
+    this.cy.get('#contactForm input[name=message]').type(message);
 
     return this;
   }

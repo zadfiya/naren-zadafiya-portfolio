@@ -7,13 +7,13 @@ import ArrowCircle from './animation/arrowCircle';
 import ContainerProjetos, { ProjetoPrincipal, ListaProjetos } from './style';
 
 const repositoriosId = {
-  390006089: '/images/LPinstalura.webp',
-  371118356: '/images/LPlayouts.webp',
-  380740837: '/images/LPjavascriptprojetos.webp',
-  385367528: '/images/LPalurakut.webp',
+  552159792: '/images/cryptocracks.png',
+  599431467: '/images/movieTheater.webp',
+  614097995: '/images/elearning.webp',
+  527875736: '/images/LPalurakut.webp',
   396137846: '/images/LPtemplate.webp',
 };
-// const repositorioIdPrincipal = [397245461];
+const repositorioIdPrincipal = [397245461];
 const repoArrObj = [{
   html_url: '#',
   id: 390006089,
@@ -46,10 +46,11 @@ const repoArrObj = [{
   forks: 1,
   description: 'Temp XYZ',
 }];
-function Projetos({  }) {
-  /* const repos = repositorios.filter((repo) => repositoriosId[repo.id]);
+function Projetos({ repositorios  }) {
+  //console.log(repositorios);
+  const repos = repositorios.filter((repo) => repositoriosId[repo.id]);
   const reposPrincipal = repositorios.filter((repo) => repositorioIdPrincipal.includes(repo.id));
-  console.log(repos) */
+  //console.log(repos)
   return (
     <ContainerProjetos>
       <Box
@@ -172,7 +173,7 @@ function Projetos({  }) {
       </Box>
       <Box>
         <ListaProjetos id="listaProjetos">
-          {repoArrObj.map((item) => (
+          {repos.map((item) => (
             <li key={item.id}>
               <a
                 href={item.html_url}
@@ -252,11 +253,11 @@ function Projetos({  }) {
           tag="a"
           variant="paragraph1XS"
           color="fonts.main"
-          href="https://github.com/carolandrade1?tab=repositories"
+          href="https://github.com/zadfiya?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Veja outros projetos
+          See Other Projects
         </Text>
       </Box>
     </ContainerProjetos>
