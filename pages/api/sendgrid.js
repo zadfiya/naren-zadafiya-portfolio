@@ -1,7 +1,7 @@
 import sendgrid from '@sendgrid/mail';
-import nodemailer from 'nodemailer';
-const API_KEY= process.env.SENDGRID_API_KEY;
-sendgrid.setApiKey();
+//import nodemailer from 'nodemailer';
+const API_KEY = process.env.SENDGRID_API_KEY;
+sendgrid.setApiKey(API_KEY);
 
 // let transporter = nodemailer.createTransport({
 //   host: "smtp.gmail.com",
