@@ -1,7 +1,7 @@
 // <reference types="cypress"/>
 import ContactScreenPageObject from '../../../src/components/screens/contato/ContactScreen.pageObject';
 
-describe('/contato', () => {
+describe('/contact', () => {
   describe('when click contact button and modal is open', () => {
     describe('fill forms fields correctly', () => {
       // it === test que estamos fazendo

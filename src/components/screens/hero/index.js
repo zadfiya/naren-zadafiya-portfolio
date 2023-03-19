@@ -15,7 +15,7 @@ function Hero() {
           marginBottom="12px"
           color="fonts.main"
         >
-          Bonjour👋, My name is
+          Bonjour👋,  
         </Text>
         <Text
           tag="h1"
@@ -33,7 +33,7 @@ function Hero() {
           marginBottom="12px"
           color="fonts.main"
         >
-          Full Stack Developer🧑‍💻, currently located in Montreal, Canada🍁.
+          A Full Stack Developer🧑‍💻, currently located in Montreal, Canada🍁.
           Looking for full time oppurtunity to work in software development Area.
         </Text>
         <Link href="/contact" className="contato">
