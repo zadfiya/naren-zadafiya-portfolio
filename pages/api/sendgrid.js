@@ -22,7 +22,7 @@ sendgrid.setApiKey(API_KEY);
 //       from: "narendrazadafiya.albetrios@gmail.com" , // sender address
 //       to: "narenzadafiya.cn@gmail.com", // list of receivers
 //       subject: `email of: ${req.body.name}`, // Subject line
-//       text: `Name: ${req.body.name}\nEmail: ${req.body.email}\nMessage: ${req.body.message}`,
+// text: `Name: ${req.body.name}\nEmail: ${req.body.email}\nMessage: ${req.body.message}`,
 //       html: "<b>Hello world?</b>", // html body
 //     }).then(info=>console.log(info.messageId)).catch(error=>console.log(error));
 //   } catch (error) {
