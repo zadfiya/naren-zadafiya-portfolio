@@ -15,7 +15,7 @@ function Hero() {
           marginBottom="12px"
           color="fonts.main"
         >
-          Bonjour👋, 
+          Bonjour👋,
         </Text>
         <Text
           tag="h1"
