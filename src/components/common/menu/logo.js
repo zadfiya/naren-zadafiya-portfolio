@@ -4,7 +4,7 @@ import Box from '../../foundation/box';
 import Link from '../link/link';
 
 function Logo() {
-  const themeContext = useContext(ThemeContext);
+  /* const themeContext = useContext(ThemeContext); */
 
   return (
     <Box
