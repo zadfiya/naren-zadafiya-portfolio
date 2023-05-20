@@ -8,9 +8,9 @@ import ContainerProjetos, { ProjetoPrincipal, ListaProjetos } from './style';
 
 const repositoriosId = {
   552159792: '/images/cryptocracks.png',
-  599431467: '/images/movieTheater.webp',
+  625429783: '/images/movieTheater.webp',
   614097995: '/images/elearning.webp',
-  527875736: '/images/LPalurakut.webp',
+  629267051: '/images/opentracks.png',
   396137846: '/images/LPtemplate.webp',
 };
 const repositorioIdPrincipal = [397245461];
@@ -47,7 +47,7 @@ const repoArrObj = [{
   description: 'Temp XYZ',
 }];
 function Projetos({ repositorios  }) {
-  //console.log(repositorios);
+  console.log(repositorios);
   const repos = repositorios.filter((repo) => repositoriosId[repo.id]);
   const reposPrincipal = repositorios.filter((repo) => repositorioIdPrincipal.includes(repo.id));
   //console.log(repos)
