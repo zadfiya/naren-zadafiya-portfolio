@@ -2,9 +2,9 @@
 import React from 'react';
 import Box from '../../foundation/box';
 import Text from '../../foundation/text';
-/* import Link from '../../common/link/link'; */
+import Link from '../../common/link/link'; 
 import ArrowCircle from './animation/arrowCircle';
-import ContainerProjetos, { ProjetoPrincipal, ListaProjetos } from './style';
+import ContainerProjetos, { ProjetoPrincipal, ListaProjetos, TextContainer } from './style';
 
 const repositoriosId = {
   552159792: '/images/cryptocracks.png',
@@ -47,7 +47,6 @@ const repoArrObj = [{
   description: 'Temp XYZ',
 }];
 function Projetos({ repositorios  }) {
-  console.log(repositorios);
   const repos = repositorios.filter((repo) => repositoriosId[repo.id]);
   const reposPrincipal = repositorios.filter((repo) => repositorioIdPrincipal.includes(repo.id));
   //console.log(repos)
@@ -260,6 +259,33 @@ function Projetos({ repositorios  }) {
           See Other Projects
         </Text>
       </Box>
+      <TextContainer>
+      <Link href="https://drive.google.com/file/d/1ZEOs3z8H-UA3xiLQIqN6FvYqfweofsMV/view?usp=sharing" target="_blank" className="resume">
+          <Text tag="span" variant="paragraph2" color="fonts.main">
+          Resume
+          <span className='svgicon'>
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="25" viewBox="0 0 24 24">
+            
+            <title/>
+              <g id="Complete">
+                <g id="download">
+                  <g>
+                    <path d="M3,12.3v7a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2v-7" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <g>
+                    <polyline data-name="Right" fill="none" id="Right-2" points="7.9 12.3 12 16.3 16.1 12.3" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12" x2="12" y1="2.7" y2="14.2"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+        </svg>
+          </span>
+            
+                
+            </Text>
+      </Link>
+      </TextContainer>
+      
     </ContainerProjetos>
   );
 }
