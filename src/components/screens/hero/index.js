@@ -18,6 +18,15 @@ function Hero() {
           Bonjour👋
         </Text>
         <Text
+          tag="h3"
+          variant="subTitle"
+          textAlign="left"
+          marginBottom="1px"
+          color="fonts.main"
+        >
+          My Self
+        </Text>
+        <Text
           tag="h1"
           variant="titleXS"
           textAlign="left"
@@ -34,7 +43,7 @@ function Hero() {
           color="fonts.main"
         >
           A Full Stack Software Developer🧑‍💻, currently located in Montreal, Canada🍁.
-          Actively Looking for Fall Co-OP oppurtunity to work in software development Area.
+          Actively Looking for Winter Co-op oppurtunity to work in software development Area.
         </Text>
         <Link href="/contact" className="contato">
           <Text tag="span" variant="paragraph2" color="fonts.main">

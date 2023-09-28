@@ -18,7 +18,7 @@ const ContainerCircle = () => (
     </svg>
     <video
       className="video"
-      src="/video/projetosVideo.mp4"
+      src="/video/projectVideo.mp4"
       preload="auto"
       autoPlay
       muted
