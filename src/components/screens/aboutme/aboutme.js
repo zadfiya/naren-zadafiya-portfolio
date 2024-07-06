@@ -22,12 +22,16 @@ const AboutMe = () =>{
         <Info>
           <Description>
             <Text tag="p" variant="paragraph3">
-                Graduate student of computer science at the University of Southern California.
+            A versatile software engineer with a passion for leadership, seeking
+            a challenging role to leverage technical prowess and deliver
+            exceptional software solutions. Proficient at quickly adapting to
+            diverse technologies and environments, I excel with mentorship and
+            embrace new opportunities. Committed to continuous learning and
+            driving innovation, I aspire to make a meaningful impact by
+            optimizing processes, elevating organizational performance, and
+            staying at the forefront of technology trends.
             </Text>
             <Text tag="p" variant="paragraph3">
-            Talking about the future, I aspire to lead as a technical or product manager, working alongside skilled teams 
-            to develop high-revenue products that cater to business and client needs. Through strategic leadership, 
-            I aim to drive innovation and ensure organizational success.
             </Text>
           </Description>
         </Info>

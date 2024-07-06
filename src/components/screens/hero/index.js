@@ -43,7 +43,7 @@ function Hero() {
           color="fonts.main"
         >
           A Full Stack Software Developer🧑‍💻, currently located in Montreal, Canada🍁.
-          Actively Looking for Winter Co-op oppurtunity to work in software development Area.
+          I have keen interest for coding and developing software.
         </Text>
         <Link href="/contact" className="contato">
           <Text tag="span" variant="paragraph2" color="fonts.main">
