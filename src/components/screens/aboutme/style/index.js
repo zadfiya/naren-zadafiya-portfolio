@@ -57,6 +57,75 @@ const Container = styled.section`
     `,
   })}
 
+  .container {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.left-column {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.right-column {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.section_title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.section_content::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #212121;
+  border: 2px solid #2977d1;
+}
+
+.section_content {
+  border-left: 2px solid black;
+  padding-bottom: 0.4rem;
+  padding-left: 2rem;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+.work_title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.external_link {
+    margin-left: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.date {
+    font-size: 14px;
+    color: #ccc;
+    margin: 10px 0;
+}
+
+.work_description ul {
+    list-style: none;
+    padding: 0;
+}
+
+.work_description li {
+    margin-bottom: 10px;
+}
+
   
 `;
 
@@ -90,7 +159,51 @@ export const Description = styled.div`
     `,
   })}
   }
+  
+  .resume {
+      width: 130px;
+      margin-bottom: 15px;
+      position: relative;
+      padding: 8px 12px;
+      transition: all .2s ease;
+      cursor: pointer;
+      display: inline;
 
+    ${breakpointsMedia({
+    md: css`
+    padding: 8px 12px;
+    `,
+  })}
+      &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          border-radius: 28px;
+          background: ${({ theme }) => theme.colors.details.main.color};
+          width: 35px;
+          height: 35px;
+          transition: all .3s ease;
+      }
+      span {
+          position: relative;
+          font-weight: 500;
+          line-height: 18px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          vertical-align: middle;
+      }
+      &:hover {
+          &:before {
+          width: 100%;
+          background: ${({ theme }) => theme.colors.details.main.color};
+          }
+      }
+      &:active {
+          transform: scale(.96);
+      }
+  }
 `;
 
 export const Channels = styled.ul`

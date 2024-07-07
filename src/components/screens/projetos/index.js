@@ -14,38 +14,6 @@ const repositoriosId = {
   396137846: '/images/LPtemplate.webp',
 };
 const repositorioIdPrincipal = [397245461];
-const repoArrObj = [{
-  html_url: '#',
-  id: 390006089,
-  name: 'Temp',
-  stargazers_count: 1,
-  forks: 1,
-  description: 'Temp XYZ',
-},
-{
-  html_url: '#',
-  id: 371118356,
-  name: 'Temp',
-  stargazers_count: 1,
-  forks: 1,
-  description: 'Temp XYZ',
-},
-{
-  html_url: '#',
-  id: 380740837,
-  name: 'Temp',
-  stargazers_count: 1,
-  forks: 1,
-  description: 'Temp XYZ',
-},
-{
-  html_url: '#',
-  id: 385367528,
-  name: 'Temp',
-  stargazers_count: 1,
-  forks: 1,
-  description: 'Temp XYZ',
-}];
 function Projetos({ repositorios  }) {
   const repos = repositorios.filter((repo) => repositoriosId[repo.id]);
   const reposPrincipal = repositorios.filter((repo) => repositorioIdPrincipal.includes(repo.id));
