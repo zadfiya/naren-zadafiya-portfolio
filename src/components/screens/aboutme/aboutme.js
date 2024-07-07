@@ -32,39 +32,37 @@ const AboutMe = () =>{
             optimizing processes, elevating organizational performance, and
             staying at the forefront of technology trends.
             </Text>
-            <Text tag="p" variant="paragraph3">
-            </Text>
+          </Description>
+          <Description>
+            <Link href="https://drive.google.com/file/d/1ZEOs3z8H-UA3xiLQIqN6FvYqfweofsMV/view?usp=sharing" target="_blank" className="resume">
+              <Text tag="span" variant="paragraph2" color="fonts.main">
+                Resume
+                <span className='svgicon'>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="25" viewBox="0 0 24 24">
+                      
+                      <title/>
+                      <g id="Complete">
+                          <g id="download">
+                          <g>
+                              <path d="M3,12.3v7a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2v-7" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                              <g>
+                              <polyline data-name="Right" fill="none" id="Right-2" points="7.9 12.3 12 16.3 16.1 12.3" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                              <line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12" x2="12" y1="2.7" y2="14.2"/>
+                              </g>
+                          </g>
+                          </g>
+                      </g>
+                  </svg>
+                </span> 
+                        
+              </Text>
+            </Link>
           </Description>
         </Info>
         <Image>
           <img src="https://media.licdn.com/dms/image/D4E03AQE3_Ii7IadzoA/profile-displayphoto-shrink_800_800/0/1695646628584?e=1725494400&v=beta&t=T38Xu0kpBUqNv0CTyh19aRpPHZJaAb0ItYJ-2SsUgFw" alt="" />
         </Image>
       </Box>
-      <Description>
-        <Link href="https://drive.google.com/file/d/1ZEOs3z8H-UA3xiLQIqN6FvYqfweofsMV/view?usp=sharing" target="_blank" className="resume">
-            <Text tag="span" variant="paragraph2" color="fonts.main">
-            Resume
-            <span className='svgicon'>
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="25" viewBox="0 0 24 24">
-                
-                <title/>
-                <g id="Complete">
-                    <g id="download">
-                    <g>
-                        <path d="M3,12.3v7a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2v-7" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                        <g>
-                        <polyline data-name="Right" fill="none" id="Right-2" points="7.9 12.3 12 16.3 16.1 12.3" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                        <line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12" x2="12" y1="2.7" y2="14.2"/>
-                        </g>
-                    </g>
-                    </g>
-                </g>
-            </svg>
-            </span> 
-                    
-                </Text>
-        </Link>
-      </Description>
       <div class="container">
         <div class="left-column">
           <Text tag="h1" variant="title">Work Experience</Text>
@@ -303,6 +301,53 @@ const AboutMe = () =>{
                 </div>
               </div>
         </div>
+    </div>
+    <div>
+      <Text tag="h1" variant="title">Publications</Text>
+      <div class="work_description">
+        <ul>
+            <li>
+              <Text tag="p" variant="paragraph1" href="https://ieeexplore.ieee.org/document/9716541" target="_blank">
+                <b>Detecting Credit Card Frauds Using Isolation Forest And Local Outlier Factor - Analytical Insights</b>,
+                2022 4th International Conference on Smart Systems and Inventive Technology (ICSSIT), Tirunelveli, India, 
+                2022, pp. 1588-1594, doi: 10.1109/ICSSIT53264.2022.9716541.
+                <svg
+                            stroke="#fff"
+                            fill="none"
+                            strokeWidth="2"
+                            viewBox="0 0 24 24"
+                            height="1em"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </Text>
+            </li>
+            <li>
+              <Text tag="p" variant="paragraph1" href="https://ieeexplore.ieee.org/document/9676008" target="_blank">
+              <b>A Ratiocinative Concept of Algorithmic Trading using MACD Indicator</b>, 
+              2021 5th International Conference on Electronics, Communication and Aerospace Technology (ICECA), Coimbatore, India, 
+              2021, pp. 369-376, doi: 10.1109/ICECA52323.2021.9676008.
+                <svg
+                  stroke="#fff"
+                  fill="none"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+              >
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </Text>
+            </li>
+        </ul>
+      </div>
     </div>
     </Container>
         </>

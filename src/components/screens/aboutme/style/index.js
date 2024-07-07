@@ -113,7 +113,7 @@ const Container = styled.section`
 
 .date {
     font-size: 14px;
-    color: #ccc;
+    color: #FFFFFF;
     margin: 10px 0;
 }
 
