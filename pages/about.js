@@ -4,10 +4,9 @@ import websitePageHOC from '../src/components/wrappers/websitePage/hoc';
 
 function AboutScreen() {
   return (
-    <AboutMe/>
+    <AboutMe />
   );
 }
-
 
 export default websitePageHOC(AboutScreen, {
   pageWrapperProps: {
