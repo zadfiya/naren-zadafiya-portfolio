@@ -1,9 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Box from '../../foundation/box';
 import Text from '../../foundation/text';
 import Link from '../../common/link/link'; 
-import Container, { Description, Channels, Image, Info
+import Container, { Description, Image, Info
 } from './style';
 
 const AboutMe = () =>{
@@ -65,12 +64,12 @@ const AboutMe = () =>{
       </Box>
       <div class="container">
         <div class="left-column">
-          <Text tag="h1" variant="title">Work Experience</Text>
             <div class="section_content">
-            <Text tag="h3" variant="subTitle">Software Developer Intern- Cloud</Text>
+            <Text tag="h1" variant="title">Work Experience</Text>
+            <Text tag="h3" variant="subTitle">Full Stack Developer</Text>
                 <div>
-                   Genetec, Montreal
-                    <a href="https://www.linkedin.com/company/motorolasolutions/" class="external_link">
+                    Renetech Digital, New York, USA
+                    <a href="https://rentechdigital.com/" class="external_link">
                         <svg
                             stroke="#fff"
                             fill="none"
@@ -86,22 +85,22 @@ const AboutMe = () =>{
                         </svg>
                     </a>
                 </div>
-                <div class="date">Sep 2023 - Present</div>
+                <div class="date">Jan 2022 - Augus 2022</div>
                 <div class="work_description">
                     <ul>
-                        <li>Led the backend team in the making backend more Scalable, Secure, and Reliable in Node.js.</li>
-                        <li>Programmed a cron job to Synchronously fetched data from Google Cloud API, reducing manual data entry by 70%.</li>
+                        <li><b>Led the backend team</b> in the making backend more Scalable, Secure, and Reliable in <b>Node.js</b>.</li>
+                        <li>Programmed a cron job to Synchronously fetched data from Google Cloud API, reducing manual data entry by <b>70%.</b></li>
                         <li>Connected 2 interaction panels, user web panel (Next.JS) with admin panel (React) in the nginx.</li>
-                        <li>Implemented a functionality of user segmentation for targeting specific users, resulting 25% surge in engagement.</li>
-                        <li>Handled recurring payments & 1-time charges by implementing The Stripe Payment Gateway service system.</li>
-                        <li>Prepared different React component in MVC micro architecture framework which internally use various design pattern (2+)
-                        such as singleton, factory.</li>
+                        <li>Implemented a functionality of <b>user segmentation</b> for targeting specific users, resulting 25% surge in engagement.</li>
+                        <li>Handled recurring payments & 1-time charges by implementing <b>The Stripe Payment Gateway service system</b>.</li>
+                        <li>Prepared different React component in <b>MVC micro architecture</b> framework which internally use various design patterns (2+)
+                        such as <b>singleton, factory</b>.</li>
                     </ul>
                 </div>
             </div>
-            <Text tag="h1" variant="title">Internship Experience</Text>
             <div class="section_content">
-                <div class="work_title">Software Developer - Cloud</div>
+              <Text tag="h1" variant="title">Internship Experience</Text>
+              <div class="work_title">Software Developer - Cloud</div>
                 <div>
                     Genetec, Montreal, Canada
                     <a href="https://www.linkedin.com/company/motorolasolutions/" class="external_link">
@@ -123,10 +122,10 @@ const AboutMe = () =>{
                 <div class="date">September 2023 - Present</div>
                 <div class="work_description">
                     <ul>
-                        <li>Designed a Microservice architecture and implemented 3 distinct services, leading to improvement in system uptime.</li>
-                        <li>Developed RESTful APIs using .NET Core, ensuring data integrity and security, with 0 data breaches during my tenure.</li>
-                        <li>Applied Dependency Injection pattern in projects, improving code modularity and accelerating development to 1.3x.</li>
-                        <li>Enhanced Genetec cloud service deployments with automation techniques and scripts in powershell.</li>
+                        <li>Designed a <b>Microservice architecture</b> and implemented <b>3</b> distinct services, leading to improvement in system uptime.</li>
+                        <li>Developed <b>RESTful APIs</b> using .NET Core, ensuring data integrity and security, with <b>zero data breaches</b> during my tenure.</li>
+                        <li>Applied <b>Dependency Injection pattern</b> in projects, improving code modularity and accelerating development to 1.3x.</li>
+                        <li>Enhanced <b>Genetec's</b> cloud service deployments with automation techniques and scripts in powershell.</li>
                     </ul>
                 </div>
             </div>
@@ -153,11 +152,11 @@ const AboutMe = () =>{
                 <div class="date"> 2023 - Present</div>
                 <div class="work_description">
                     <ul>
-                        <li>Experienced in working with Redux architecture using complex Object-Oriented concepts in improving the performance of the
+                        <li>Experienced in working with Redux architecture using complex <b>Object-Oriented concepts</b> in improving the performance of the
                         websites to 1.5 sec.</li>
-                        <li>Improved initial loading time of the web page of the existing site from 7 Sec to under 3 Sec by caching data on UI, reducing
+                        <li>Improved initial loading time of the web page of the existing site from <b>7 Sec to under 3 Sec</b> by caching data on UI, reducing
                         server call and stopping re-rendering of components.</li>
-                        <li>Integrated the application with third-party services and external APIs, Utilized TanStack queries, as part of the implementation.</li>
+                        <li>Integrated the application with third-party services and external APIs, Utilized <b>TanStack queries</b>, as part of the implementation.</li>
                     </ul>
                 </div>
             </div>
@@ -184,8 +183,8 @@ const AboutMe = () =>{
                 <div class="date"> 2023 - Present</div>
                 <div class="work_description">
                     <ul>
-                        <li>Build an elegant UI by utilizing various android widgets with webview in order to load webpage for The Ranch Simulator Game.</li>
-                        <li>Parsed JSON data and handle API for data loading, used Firestore for storing realtime data.</li>
+                        <li>Build an elegant UI by utilizing various android widgets with webview in order to load webpage for <b>The Ranch Simulator Game</b>.</li>
+                        <li><b>Parsed JSON</b> data and handle API for data loading, used <b>Firestore</b> for storing realtime data.</li>
                         <li>Contributed to the deployment process, including app submission to app stores (Google Play), ensuring successful releases.</li>
                     </ul>
                 </div>

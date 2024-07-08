@@ -79,17 +79,6 @@ const Container = styled.section`
     margin-bottom: 10px;
 }
 
-.section_content::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
-  left: -9px;
-  top: 0;
-  background: #212121;
-  border: 2px solid #2977d1;
-}
 
 .section_content {
   border-left: 2px solid black;
@@ -99,6 +88,16 @@ const Container = styled.section`
   margin-top: 10px;
 }
 
+.section_content::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  border: 2px solid black;
+}
 .work_title {
     font-size: 20px;
     font-weight: bold;
