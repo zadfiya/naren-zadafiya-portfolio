@@ -149,7 +149,7 @@ const AboutMe = () =>{
                         </svg>
                     </a>
                 </div>
-                <div class="date"> 2023 - Present</div>
+                <div class="date"> June 2021 - August 2021</div>
                 <div class="work_description">
                     <ul>
                         <li>Experienced in working with Redux architecture using complex <b>Object-Oriented concepts</b> in improving the performance of the
@@ -180,7 +180,7 @@ const AboutMe = () =>{
                         </svg>
                     </a>
                 </div>
-                <div class="date"> 2023 - Present</div>
+                <div class="date"> May 2020 - August 2020</div>
                 <div class="work_description">
                     <ul>
                         <li>Build an elegant UI by utilizing various android widgets with webview in order to load webpage for <b>The Ranch Simulator Game</b>.</li>
