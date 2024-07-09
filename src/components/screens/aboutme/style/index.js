@@ -79,6 +79,9 @@ const Container = styled.section`
     margin-bottom: 10px;
 }
 
+.title {
+  margin: 20px 0px;
+}
 
 .section_content {
   border-left: 2px solid black;
@@ -89,14 +92,13 @@ const Container = styled.section`
 }
 
 .section_content::before {
-  content: "";
-  position: absolute;
+  content: "O";
+  position: relative;
   width: 16px;
   height: 16px;
   border-radius: 50px;
-  left: -9px;
-  top: 0;
-  border: 2px solid black;
+  left: -40px;
+  background: black 
 }
 .work_title {
     font-size: 20px;
