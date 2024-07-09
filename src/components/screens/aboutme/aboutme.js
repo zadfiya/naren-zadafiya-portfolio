@@ -95,10 +95,14 @@ const AboutMe = () => (
                   .
                 </li>
                 <li>
-                  Programmed a cron job to Synchronously fetched data from Google Cloud API, reducing manual data entry by
+                  Programmed a cron job to Synchronously fetched data from Google Cloud API,
+                  reducing manual data entry by
                   <b> 70%.</b>
                 </li>
-                <li>Connected 2 interaction panels, user web panel (Next.JS) with admin panel (React) in the nginx.</li>
+                <li>
+                  Connected 2 interaction panels, user web panel (Next.JS) with admin panel
+                  (React) in the nginx.
+                </li>
                 <li>
                   Implemented a functionality of
                   <b> user segmentation</b>
@@ -172,7 +176,7 @@ const AboutMe = () => (
                 </li>
                 <li>
                   Enhanced
-                  <b> Genetec's</b>
+                  <b> Genetec`&aposs</b>
                   {' '}
                   cloud service deployments with automation techniques and scripts in powershell.
                 </li>
@@ -248,7 +252,8 @@ const AboutMe = () => (
             <div className="work_description">
               <ul>
                 <li>
-                  Build an elegant UI by utilizing various android widgets with webview in order to load webpage for
+                  Build an elegant UI by utilizing various android widgets with
+                  webview in order to load webpage for
                   <b> The Ranch Simulator Game</b>
                   .
                 </li>
@@ -261,7 +266,11 @@ const AboutMe = () => (
                   {' '}
                   for storing realtime data.
                 </li>
-                <li>Contributed to the deployment process, including app submission to app stores (Google Play), ensuring successful releases.</li>
+                <li>
+                  Contributed to the deployment process, including app
+                  submission to app stores (Google Play)
+                  , ensuring successful releases.
+                </li>
               </ul>
             </div>
           </div>
@@ -383,9 +392,13 @@ const AboutMe = () => (
           <ul>
             <li>
               <Text tag="p" variant="paragraph1" href="https://ieeexplore.ieee.org/document/9716541" target="_blank">
-                <b>Detecting Credit Card Frauds Using Isolation Forest And Local Outlier Factor - Analytical Insights</b>
+                <b>
+                  Detecting Credit Card Frauds Using Isolation Forest And Local
+                  Outlier Factor - Analytical Insights
+                </b>
                 ,
-                2022 4th International Conference on Smart Systems and Inventive Technology (ICSSIT), Tirunelveli, India,
+                2022 4th International Conference on Smart Systems
+                and Inventive Technology (ICSSIT), Tirunelveli, India,
                 2022, pp. 1588-1594, doi: 10.1109/ICSSIT53264.2022.9716541.
                 <svg
                   stroke="#fff"
@@ -406,7 +419,8 @@ const AboutMe = () => (
               <Text tag="p" variant="paragraph1" href="https://ieeexplore.ieee.org/document/9676008" target="_blank">
                 <b>A Ratiocinative Concept of Algorithmic Trading using MACD Indicator</b>
                 ,
-                2021 5th International Conference on Electronics, Communication and Aerospace Technology (ICECA), Coimbatore, India,
+                2021 5th International Conference on Electronics, Communication and
+                Aerospace Technology (ICECA), Coimbatore, India,
                 2021, pp. 369-376, doi: 10.1109/ICECA52323.2021.9676008.
                 <svg
                   stroke="#fff"
