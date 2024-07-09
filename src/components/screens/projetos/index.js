@@ -1,10 +1,9 @@
 /* eslint-disable */
 import React from 'react';
 import Box from '../../foundation/box';
-import Text from '../../foundation/text';
-import Link from '../../common/link/link'; 
+import Text from '../../foundation/text'; 
 import ArrowCircle from './animation/arrowCircle';
-import ContainerProjetos, { ProjetoPrincipal, ListaProjetos, TextContainer } from './style';
+import ContainerProjetos, { ProjetoPrincipal, ListaProjetos } from './style';
 
 const repositoriosId = {
   552159792: '/images/cryptocracks.png',
@@ -16,7 +15,7 @@ const repositoriosId = {
 const repositorioIdPrincipal = [397245461];
 function Projetos({ repositorios  }) {
   const repos = repositorios.filter((repo) => repositoriosId[repo.id]);
-  const reposPrincipal = repositorios.filter((repo) => repositorioIdPrincipal.includes(repo.id));
+  // const reposPrincipal = repositorios.filter((repo) => repositorioIdPrincipal.includes(repo.id));
   //console.log(repos)
   return (
     <ContainerProjetos>
