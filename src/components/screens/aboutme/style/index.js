@@ -248,8 +248,10 @@ export const Channels = styled.ul`
 `;
 
 export const Image = styled.div`
+  position: relative;
   order: 1;
   margin: 0 auto;
+  animation: none;
 
   ${breakpointsMedia({
     md: css`
@@ -257,10 +259,39 @@ export const Image = styled.div`
     `,
   })}
 
+  .circle {
+    display:none;
+    position: absolute;
+    top: -3%;
+    left: -3%;
+    width: 345px;
+    height: 345px;
+
+    ${breakpointsMedia({
+    md: css`
+      display: initial;
+      animation: rotation 10s infinite linear;
+    `,
+  })}
+    }
+
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+  }
+
+
   img {
     width: 180px;
     height: 180px;
     border-radius: 50%;
+
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
 
     ${breakpointsMedia({
     md: css`
@@ -269,6 +300,11 @@ export const Image = styled.div`
       border-radius: 50%;
     `,
   })}
+  }
+
+  img:hover{
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
   }
 `;
 

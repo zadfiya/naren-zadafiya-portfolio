@@ -20,21 +20,31 @@ const AboutMe = () => (
         <Info>
           <Description>
             <Text tag="p" variant="paragraph3">
-            Hi, I'm Naren, Graduate Student of 
-            <a href="https://www.concordia.ca/" className="external_link">
-            Concordia University</a> and, a passionate software engineer with a knack for creating
-             innovative and efficient solutions. With a background in <b>Full Stack Development </b>
-             and interest in <b>cloud technologies</b>, I thrive in collaborative environments
-             where continuous learning and problem-solving are key. Currently, I'm completing
+              Hi, I`m Naren, Graduate Student of
+              <a href="https://www.concordia.ca/" className="external_link">
+                Concordia University
+              </a>
+              {' '}
+              and, a passionate software engineer with a knack for creating
+              innovative and efficient solutions. With a background in
+              <b>Full Stack Development </b>
+              and interest in
+              {' '}
+              <b>cloud technologies</b>
+              , I thrive in collaborative environments
+              where continuous learning and problem-solving are key. Currently, I`m completing
               my internship at Genetec.
             </Text>
             <Text tag="p" variant="paragraph3">
-              My technical expertise includes proficiency in <b>Java, Python, .Net, Node</b>, and relational
-               databases. I'm also highly skilled in front-end development with a focus on
-                React. Additionally, I have hands-on experience with designing and implementing 
-                microservices, developing RESTful APIs, and enhancing CI/CD pipelines. I enjoy 
-                working with modern tech stacks and am always eager to expand my 
-                knowledge and tackle new challenges.
+              My technical expertise includes proficiency in
+              {' '}
+              <b>Java, Python, .Net, Node</b>
+              , and relational
+              databases. I`m also highly skilled in front-end development with a focus on
+              React. Additionally, I have hands-on experience with designing and implementing
+              microservices, developing RESTful APIs, and enhancing CI/CD pipelines. I enjoy
+              working with modern tech stacks and am always eager to expand my
+              knowledge and tackle new challenges.
             </Text>
           </Description>
           <Description>
@@ -64,7 +74,25 @@ const AboutMe = () => (
           </Description>
         </Info>
         <Image>
+          <svg
+            className="circle"
+            viewBox="0 0 252 252"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path fillRule="evenodd" clipRule="evenodd" d="M125.817 10.7636C150.363 10.4164 175.31 14.7627 195.304 28.9866C215.412 43.2918 227.727 65.5071 235.61 88.8719C243.566 112.452 247.691 137.881 240.032 161.559C232.366 185.261 214.275 203.717 193.844 218.004C173.704 232.088 150.404 241.611 125.817 241.431C101.349 241.252 78.2295 231.481 58.5104 217.013C38.8747 202.606 23.334 183.331 15.3138 160.354C7.16821 137.018 5.79539 111.538 13.4957 88.0516C21.1845 64.6001 37.3989 44.9335 57.7463 30.9325C77.7247 17.1855 101.558 11.1068 125.817 10.7636Z" stroke="black" />
+            <path fillRule="evenodd" clipRule="evenodd" d="M128.887 1.00302C155.912 1.19495 182.082 10.5003 203.441 26.4615C224.335 42.0752 238.677 64.2 246.16 88.6404C253.489 112.581 252.049 137.706 244.837 161.68C237.425 186.32 225.607 210.079 204.812 226.092C183.404 242.577 156.28 251.615 128.887 250.967C101.911 250.329 77.2381 238.13 55.6222 222.563C34.2532 207.173 16.0053 187.75 7.34179 163.432C-1.41975 138.84 -0.835607 112.082 7.44507 87.3348C15.739 62.5482 31.7847 40.8556 53.5304 25.3969C75.3902 9.85695 101.725 0.810134 128.887 1.00302Z" stroke="black" />
+            <path fillRule="evenodd" clipRule="evenodd" d="M124.234 8.0829C149.327 8.63835 172.62 19.5518 192.754 34.519C212.695 49.3431 228.956 68.6247 237.186 92.0508C245.555 115.873 246.529 141.841 238.914 165.913C231.255 190.123 215.867 211.478 194.876 225.802C174.282 239.855 149.174 244.528 124.234 244.17C99.591 243.816 75.0172 238.225 55.0528 223.794C35.0647 209.345 21.4212 187.972 13.9846 164.476C6.59336 141.123 6.62336 116.282 13.5928 92.8006C20.7059 68.8346 33.6075 46.6455 53.4711 31.436C73.68 15.9621 98.7748 7.51936 124.234 8.0829Z" stroke="black" />
+            <path fillRule="evenodd" clipRule="evenodd" d="M125.181 6.38451C150.056 6.67557 173.388 16.3048 193.925 30.3246C214.974 44.6941 234.534 62.5617 242.772 86.6592C251.078 110.957 247.354 137.471 238.833 161.694C230.47 185.467 215.675 206.336 195.397 221.33C174.981 236.427 150.581 245.318 125.181 245.731C99.4805 246.15 74.2547 238.483 53.2817 223.643C32.1281 208.676 15.0229 187.76 8.02016 162.832C1.1829 138.493 7.12516 113.08 15.5231 89.2335C23.7393 65.9031 35.507 43.6232 55.2563 28.7021C75.2601 13.5887 100.099 6.09104 125.181 6.38451Z" stroke="black" />
+          </svg>
+
           <img src="https://media.licdn.com/dms/image/D4E03AQE3_Ii7IadzoA/profile-displayphoto-shrink_800_800/0/1695646628584?e=1725494400&v=beta&t=T38Xu0kpBUqNv0CTyh19aRpPHZJaAb0ItYJ-2SsUgFw" alt="" />
+          <Text tag="h5" variant="title">
+            VolleyBall🏐 - Cricket🏏 - Badminton🏸 Enthusiast
+          </Text>
+          <Text tag="h5" variant="title">
+            Photographer📸 - Mountainer🏞️ - Coder🧑🏻‍💻 Freak
+          </Text>
         </Image>
       </Box>
       <div className="container">
@@ -183,7 +211,7 @@ const AboutMe = () => (
                 </li>
                 <li>
                   Enhanced
-                  <b> Genetec`&aposs</b>
+                  <b> Genetec`s</b>
                   {' '}
                   cloud service deployments with automation techniques and scripts in powershell.
                 </li>
