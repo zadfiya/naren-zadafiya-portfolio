@@ -20,14 +20,21 @@ const AboutMe = () => (
         <Info>
           <Description>
             <Text tag="p" variant="paragraph3">
-              A versatile software engineer with a passion for leadership, seeking
-              a challenging role to leverage technical prowess and deliver
-              exceptional software solutions. Proficient at quickly adapting to
-              diverse technologies and environments, I excel with mentorship and
-              embrace new opportunities. Committed to continuous learning and
-              driving innovation, I aspire to make a meaningful impact by
-              optimizing processes, elevating organizational performance, and
-              staying at the forefront of technology trends.
+            Hi, I'm Naren, Graduate Student of 
+            <a href="https://www.concordia.ca/" className="external_link">
+            Concordia University</a> and, a passionate software engineer with a knack for creating
+             innovative and efficient solutions. With a background in <b>Full Stack Development </b>
+             and interest in <b>cloud technologies</b>, I thrive in collaborative environments
+             where continuous learning and problem-solving are key. Currently, I'm completing
+              my internship at Genetec.
+            </Text>
+            <Text tag="p" variant="paragraph3">
+              My technical expertise includes proficiency in <b>Java, Python, .Net, Node</b>, and relational
+               databases. I'm also highly skilled in front-end development with a focus on
+                React. Additionally, I have hands-on experience with designing and implementing 
+                microservices, developing RESTful APIs, and enhancing CI/CD pipelines. I enjoy 
+                working with modern tech stacks and am always eager to expand my 
+                knowledge and tackle new challenges.
             </Text>
           </Description>
           <Description>
@@ -131,7 +138,7 @@ const AboutMe = () => (
             <div className="work_title">Software Developer - Cloud</div>
             <div>
               Genetec, Montreal, Canada
-              <a href="https://www.linkedin.com/company/motorolasolutions/" className="external_link">
+              <a href="https://www.genetec.com/" className="external_link">
                 <svg
                   stroke="#fff"
                   fill="none"
@@ -187,7 +194,7 @@ const AboutMe = () => (
             <div className="work_title">Software Developer</div>
             <div>
               Rentech Digital, New York, USA
-              <a href="https://www.linkedin.com/company/motorolasolutions/" className="external_link">
+              <a href="https://rentechdigital.com/" className="external_link">
                 <svg
                   stroke="#fff"
                   fill="none"
@@ -232,7 +239,7 @@ const AboutMe = () => (
             <div className="work_title">Mobile Application Developer</div>
             <div>
               Zibma Infotech, Surat, India
-              <a href="https://www.linkedin.com/company/motorolasolutions/" className="external_link">
+              <a href="https://www.linkedin.com/company/zibma/" className="external_link">
                 <svg
                   stroke="#fff"
                   fill="none"
@@ -281,7 +288,7 @@ const AboutMe = () => (
             <div className="work_title">Masters Of Applied Computer Science</div>
             <div>
               Concordia University, Montreal, Canada
-              <a href="https://www.linkedin.com/company/motorolasolutions/" className="external_link">
+              <a href="https://www.concordia.ca/" className="external_link">
                 <svg
                   stroke="#fff"
                   fill="none"
@@ -301,7 +308,7 @@ const AboutMe = () => (
             <div className="work_title">B.Tech Computer Engineering</div>
             <div>
               Chorotar University of Science & Technology, Anand, India
-              <a href="https://www.linkedin.com/company/motorolasolutions/" className="external_link">
+              <a href="https://www.charusat.ac.in/" className="external_link">
                 <svg
                   stroke="#fff"
                   fill="none"
