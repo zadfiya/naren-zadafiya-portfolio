@@ -99,6 +99,63 @@ const AboutMe = () => (
         <div className="left-column">
           <Text tag="h1" variant="title" className="title">Work Experience</Text>
           <div className="section_content">
+          <Text tag="h3" variant="subTitle">Software Developer Intern- Cloud</Text>
+            {/* <div className="work_title">Software Developer - Cloud</div> */}
+            <div>
+              Genetec, Montreal, Canada
+              <a href="https://www.genetec.com/" className="external_link">
+                <svg
+                  stroke="#fff"
+                  fill="none"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+            </div>
+            <div className="date">September 2023 - Present</div>
+            <div className="work_description">
+              <ul>
+                <li>
+                  Designed a
+                  <b> Microservice architecture</b>
+                  {' '}
+                  and implemented
+                  <b> 3</b>
+                  {' '}
+                  distinct services, leading to improvement in system uptime.
+                </li>
+                <li>
+                  Developed
+                  <b> RESTful APIs</b>
+                  {' '}
+                  using .NET Core, ensuring data integrity and security, with
+                  <b> zero data breaches</b>
+                  {' '}
+                  during my tenure.
+                </li>
+                <li>
+                  Applied
+                  <b> Dependency Injection pattern</b>
+                  {' '}
+                  in projects, improving code modularity and accelerating development to 1.3x.
+                </li>
+                <li>
+                  Enhanced
+                  <b> Genetec`s</b>
+                  {' '}
+                  cloud service deployments with automation techniques and scripts in powershell.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="section_content">
             <Text tag="h3" variant="subTitle">Full Stack Developer</Text>
             <div>
               Renetech Digital, New York, USA
@@ -161,65 +218,9 @@ const AboutMe = () => (
               </ul>
             </div>
           </div>
-          <Text tag="h1" variant="title" className="title">Internship Experience</Text>
+          {/* <Text tag="h1" variant="title" className="title">Internship Experience</Text> */}
           <div className="section_content">
-            <div className="work_title">Software Developer - Cloud</div>
-            <div>
-              Genetec, Montreal, Canada
-              <a href="https://www.genetec.com/" className="external_link">
-                <svg
-                  stroke="#fff"
-                  fill="none"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-            </div>
-            <div className="date">September 2023 - Present</div>
-            <div className="work_description">
-              <ul>
-                <li>
-                  Designed a
-                  <b> Microservice architecture</b>
-                  {' '}
-                  and implemented
-                  <b> 3</b>
-                  {' '}
-                  distinct services, leading to improvement in system uptime.
-                </li>
-                <li>
-                  Developed
-                  <b> RESTful APIs</b>
-                  {' '}
-                  using .NET Core, ensuring data integrity and security, with
-                  <b> zero data breaches</b>
-                  {' '}
-                  during my tenure.
-                </li>
-                <li>
-                  Applied
-                  <b> Dependency Injection pattern</b>
-                  {' '}
-                  in projects, improving code modularity and accelerating development to 1.3x.
-                </li>
-                <li>
-                  Enhanced
-                  <b> Genetec`s</b>
-                  {' '}
-                  cloud service deployments with automation techniques and scripts in powershell.
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="section_content">
-            <div className="work_title">Software Developer</div>
+          <Text tag="h3" variant="subTitle">Software Developer Intern</Text>
             <div>
               Rentech Digital, New York, USA
               <a href="https://rentechdigital.com/" className="external_link">
@@ -264,7 +265,7 @@ const AboutMe = () => (
             </div>
           </div>
           <div className="section_content">
-            <div className="work_title">Mobile Application Developer</div>
+          <Text tag="h3" variant="subTitle">Mobile Application Developer</Text>
             <div>
               Zibma Infotech, Surat, India
               <a href="https://www.linkedin.com/company/zibma/" className="external_link">
@@ -313,7 +314,7 @@ const AboutMe = () => (
         <div className="right-column">
           <Text tag="h1" variant="title" className="title">Education</Text>
           <div className="section_content">
-            <div className="work_title">Masters Of Applied Computer Science</div>
+          <Text tag="h3" variant="subTitle">Masters Of Applied Computer Science</Text>
             <div>
               Concordia University, Montreal, Canada
               <a href="https://www.concordia.ca/" className="external_link">
@@ -333,7 +334,7 @@ const AboutMe = () => (
               </a>
             </div>
             <div className="date">September 2022 - Present</div>
-            <div className="work_title">B.Tech Computer Engineering</div>
+            <Text tag="h3" variant="subTitle">B.Tech Computer Engineering</Text>
             <div>
               Chorotar University of Science & Technology, Anand, India
               <a href="https://www.charusat.ac.in/" className="external_link">
@@ -356,7 +357,7 @@ const AboutMe = () => (
           </div>
           <Text tag="h1" variant="title" className="title">Skills</Text>
           <div className="section_content">
-            <div className="work_title">Languages</div>
+          <Text tag="h3" variant="subTitle">Languages</Text>
             <div>
               <ul>
                 <li>Java</li>
@@ -370,7 +371,7 @@ const AboutMe = () => (
             </div>
           </div>
           <div className="section_content">
-            <div className="work_title">Technologies</div>
+          <Text tag="h3" variant="subTitle">Technologies</Text>
             <div>
               <ul>
                 <li>React</li>
@@ -383,7 +384,7 @@ const AboutMe = () => (
             </div>
           </div>
           <div className="section_content">
-            <div className="work_title">Database</div>
+          <Text tag="h3" variant="subTitle">Database</Text>
             <div>
               <ul>
                 <li>PostgreSQL</li>
@@ -395,7 +396,7 @@ const AboutMe = () => (
             </div>
           </div>
           <div className="section_content">
-            <div className="work_title">Event Driven Architecture - AMQT</div>
+          <Text tag="h3" variant="subTitle">Event Driven Architecture - AMQT</Text>
             <div>
               <ul>
                 <li>Microservice</li>
@@ -407,7 +408,7 @@ const AboutMe = () => (
             </div>
           </div>
           <div className="section_content">
-            <div className="work_title">DevOps/Cloud</div>
+            <Text tag="h3" variant="subTitle">Cloud/DevOps</Text>
             <div>
               <ul>
                 <li>Nginx</li>
