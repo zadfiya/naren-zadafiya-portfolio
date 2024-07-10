@@ -99,7 +99,7 @@ const AboutMe = () => (
         <div className="left-column">
           <Text tag="h1" variant="title" className="title">Work Experience</Text>
           <div className="section_content">
-          <Text tag="h3" variant="subTitle">Software Developer Intern- Cloud</Text>
+            <Text tag="h3" variant="subTitle">Software Developer Intern- Cloud</Text>
             {/* <div className="work_title">Software Developer - Cloud</div> */}
             <div>
               Genetec, Montreal, Canada
@@ -220,7 +220,7 @@ const AboutMe = () => (
           </div>
           {/* <Text tag="h1" variant="title" className="title">Internship Experience</Text> */}
           <div className="section_content">
-          <Text tag="h3" variant="subTitle">Software Developer Intern</Text>
+            <Text tag="h3" variant="subTitle">Software Developer Intern</Text>
             <div>
               Rentech Digital, New York, USA
               <a href="https://rentechdigital.com/" className="external_link">
@@ -265,7 +265,7 @@ const AboutMe = () => (
             </div>
           </div>
           <div className="section_content">
-          <Text tag="h3" variant="subTitle">Mobile Application Developer</Text>
+            <Text tag="h3" variant="subTitle">Mobile Application Developer</Text>
             <div>
               Zibma Infotech, Surat, India
               <a href="https://www.linkedin.com/company/zibma/" className="external_link">
@@ -314,7 +314,7 @@ const AboutMe = () => (
         <div className="right-column">
           <Text tag="h1" variant="title" className="title">Education</Text>
           <div className="section_content">
-          <Text tag="h3" variant="subTitle">Masters Of Applied Computer Science</Text>
+            <Text tag="h3" variant="subTitle">Masters Of Applied Computer Science</Text>
             <div>
               Concordia University, Montreal, Canada
               <a href="https://www.concordia.ca/" className="external_link">
@@ -357,7 +357,7 @@ const AboutMe = () => (
           </div>
           <Text tag="h1" variant="title" className="title">Skills</Text>
           <div className="section_content">
-          <Text tag="h3" variant="subTitle">Languages</Text>
+            <Text tag="h3" variant="subTitle">Languages</Text>
             <div>
               <ul>
                 <li>Java</li>
@@ -371,7 +371,7 @@ const AboutMe = () => (
             </div>
           </div>
           <div className="section_content">
-          <Text tag="h3" variant="subTitle">Technologies</Text>
+            <Text tag="h3" variant="subTitle">Technologies</Text>
             <div>
               <ul>
                 <li>React</li>
@@ -384,7 +384,7 @@ const AboutMe = () => (
             </div>
           </div>
           <div className="section_content">
-          <Text tag="h3" variant="subTitle">Database</Text>
+            <Text tag="h3" variant="subTitle">Database</Text>
             <div>
               <ul>
                 <li>PostgreSQL</li>
@@ -396,7 +396,7 @@ const AboutMe = () => (
             </div>
           </div>
           <div className="section_content">
-          <Text tag="h3" variant="subTitle">Event Driven Architecture - AMQT</Text>
+            <Text tag="h3" variant="subTitle">Event Driven Architecture - AMQT</Text>
             <div>
               <ul>
                 <li>Microservice</li>
