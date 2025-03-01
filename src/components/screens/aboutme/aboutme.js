@@ -99,7 +99,7 @@ const AboutMe = () => (
         <div className="left-column">
           <Text tag="h1" variant="title" className="title">Work Experience</Text>
           <div className="section_content">
-            <Text tag="h3" variant="subTitle">Software Developer Intern- Cloud</Text>
+            <Text tag="h3" variant="subTitle">Software Developer I</Text>
             {/* <div className="work_title">Software Developer - Cloud</div> */}
             <div>
               Genetec, Montreal, Canada
