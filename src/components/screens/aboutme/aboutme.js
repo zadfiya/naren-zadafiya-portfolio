@@ -86,7 +86,7 @@ const AboutMe = () => (
             <path fillRule="evenodd" clipRule="evenodd" d="M125.181 6.38451C150.056 6.67557 173.388 16.3048 193.925 30.3246C214.974 44.6941 234.534 62.5617 242.772 86.6592C251.078 110.957 247.354 137.471 238.833 161.694C230.47 185.467 215.675 206.336 195.397 221.33C174.981 236.427 150.581 245.318 125.181 245.731C99.4805 246.15 74.2547 238.483 53.2817 223.643C32.1281 208.676 15.0229 187.76 8.02016 162.832C1.1829 138.493 7.12516 113.08 15.5231 89.2335C23.7393 65.9031 35.507 43.6232 55.2563 28.7021C75.2601 13.5887 100.099 6.09104 125.181 6.38451Z" stroke="black" />
           </svg>
 
-          <img src="https://i.postimg.cc/Px4m8x9G/grey-gradient-background-designify.png" alt="" />
+          <img src="https://i.postimg.cc/kgbGYxMV/Naren-DP.png" alt="" />
           <Text tag="h5" variant="title">
             VolleyBall🏐 - Cricket🏏 - Badminton🏸 Enthusiast
           </Text>
@@ -99,7 +99,42 @@ const AboutMe = () => (
         <div className="left-column">
           <Text tag="h1" variant="title" className="title">Work Experience</Text>
           <div className="section_content">
-            <Text tag="h3" variant="subTitle">Software Developer I</Text>
+            <Text tag="h3" variant="subTitle">Senior Full Stack Engineer</Text>
+            <div>
+             Royal Bank of Canada, Montreal, QC
+              <a href="https://rentechdigital.com/" className="external_link">
+                <svg
+                  stroke="#fff"
+                  fill="none"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+            </div>
+            <div className="date">July 2025 - Present</div>
+            <div className="work_description">
+              <ul>
+                <li>
+                  Prepared different ASP.net component in
+                  <b> MVC micro architecture</b>
+                  {' '}
+                  framework which internally use various design patterns (2+)
+                  such as
+                  <b> singleton, factory</b>
+                  .
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="section_content">
+            <Text tag="h3" variant="subTitle">Software Developer - Cloud Operation</Text>
             {/* <div className="work_title">Software Developer - Cloud</div> */}
             <div>
               Genetec, Montreal, Canada
@@ -119,7 +154,7 @@ const AboutMe = () => (
                 </svg>
               </a>
             </div>
-            <div className="date">September 2023 - Present</div>
+            <div className="date">September 2023 - July 2025</div>
             <div className="work_description">
               <ul>
                 <li>
@@ -175,7 +210,7 @@ const AboutMe = () => (
                 </svg>
               </a>
             </div>
-            <div className="date">Jan 2022 - Augus 2022</div>
+            <div className="date">Jan 2022 - December 2022</div>
             <div className="work_description">
               <ul>
                 <li>
