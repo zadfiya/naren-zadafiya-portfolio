@@ -18,7 +18,7 @@ function SEO({ headTitle }) {
       <meta name="description" content="Portfolio" />
       <meta name="author" content="Naren Zadafiya" />
       <meta name="keywords" content="Next.js, React, Naren Zadafiya, Narendra, Portfolio" />
-      <meta httpEquiv="content-language" content="pt-br, en-US" />
+      <meta httpEquiv="content-language" content="en-US" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
       {/* <!-- Open Graph / Facebook --> */}
