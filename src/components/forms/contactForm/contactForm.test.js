@@ -24,20 +24,20 @@ describe('<contatForm />', () => {
         );
       });
 
-      const button = screen.getByRole('button', { name: /enviar mensagem/i });
+      const button = screen.getByRole('button', { name: /send message/i });
       expect(button).toBeDisabled();
 
-      const inputNome = screen.getByPlaceholderText(/nome/i);
-      user.type(inputNome, 'Naren');
+      const inputNome = screen.getByPlaceholderText(/your sweet name/i);
+      await user.type(inputNome, 'Naren');
       await waitFor(() => expect(inputNome).toHaveValue('Naren'));
 
-      const inputEmail = screen.getByPlaceholderText(/email/i);
-      user.type(inputEmail, 'teste@teste.com');
+      const inputEmail = screen.getByPlaceholderText(/your e-mail address/i);
+      await user.type(inputEmail, 'teste@teste.com');
       await waitFor(() => expect(inputEmail).toHaveValue('teste@teste.com'));
 
-      const inputMensagem = screen.getByPlaceholderText(/mensagem/i);
-      user.type(inputMensagem, 'Hello World!');
-      await waitFor(() => expect(inputMensagem).toHaveValue('Hello World!'));
+      const inputMensagem = screen.getByPlaceholderText(/write your message/i);
+      await user.type(inputMensagem, 'Hello World! this is test.');
+      await waitFor(() => expect(inputMensagem).toHaveValue('Hello World! this is test.'));
 
       expect(button).not.toBeDisabled();
 
@@ -53,7 +53,7 @@ describe('<contatForm />', () => {
     test('displays the respective errors', async () => {
       render(<ContactForm onSubmit={onSubmit} />);
 
-      const inputNome = screen.getByPlaceholderText(/nome/i);
+      const inputNome = screen.getByPlaceholderText(/your sweet name/i);
       inputNome.focus();
       inputNome.blur();
 
