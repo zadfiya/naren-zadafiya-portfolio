@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Sora', sans-serif;
     display: flex;
-    min-height: 100vh;
+    min-height: 100%;
     width: 100%;
   }
 
