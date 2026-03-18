@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
     background: linear-gradient(132deg, #E0E0E0, #96a7cf, #E0E0E0);
     background-size: 100% 100%;
     position: relative;
-    height: 100vh;
+    min-height: 100%;
     width: 100%;
     overflow: hidden;
     padding:0;
