@@ -5,7 +5,7 @@ const ContainerHero = styled.section`
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    height: 82vh;
+  min-height: 82vh;
     padding: 20px 0;
     overflow-y: scroll;
 
