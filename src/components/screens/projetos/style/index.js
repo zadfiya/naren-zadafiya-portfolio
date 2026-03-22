@@ -4,7 +4,7 @@ import breakpointsMedia from '../../../../theme/util/breakpoints/breakpoints';
 const ContainerProjetos = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: justify;
+  justify-content: flex-start;
   height: 82vh;
   overflow-y: scroll;
 
