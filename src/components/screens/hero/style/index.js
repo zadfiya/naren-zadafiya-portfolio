@@ -7,7 +7,7 @@ const ContainerHero = styled.section`
     flex-direction: column;
   min-height: 82vh;
     padding: 20px 0;
-    overflow-y: scroll;
+    overflow: visible;
 
     &::-webkit-scrollbar {
       width: 5px;
