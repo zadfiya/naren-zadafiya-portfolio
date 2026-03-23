@@ -6,7 +6,7 @@ const ContainerProjetos = styled.section`
   flex-direction: column;
   justify-content: flex-start;
   min-height: 82vh;
-  overflow-y: scroll;
+  overflow: visible;
 
     ${breakpointsMedia({
     md: css`
