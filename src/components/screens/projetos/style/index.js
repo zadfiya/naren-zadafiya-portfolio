@@ -87,11 +87,10 @@ export const ProjetoPrincipal = styled.ul`
     }
 
     .arrow {
-      display: none;
+      display: initial;
 
     ${breakpointsMedia({
     md: css`
-      display: initial;
       border-radius: 50%;
       transform: rotate(45deg);
       transition: ease-in-out 0.3s;
