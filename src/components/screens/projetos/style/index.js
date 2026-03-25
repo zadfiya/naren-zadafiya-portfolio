@@ -88,6 +88,8 @@ export const ProjetoPrincipal = styled.ul`
 
     .arrow {
       display: initial;
+      width: 50px;
+      height: 45px;
 
     ${breakpointsMedia({
     md: css`
@@ -242,6 +244,8 @@ export const ListaProjetos = styled.ul`
 
     .arrow {
       display: initial;
+      width: 50px;
+      height: 45px;
     ${breakpointsMedia({
     md: css`
       border-radius: 50%;
