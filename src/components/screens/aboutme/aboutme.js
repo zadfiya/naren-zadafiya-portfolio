@@ -1,8 +1,35 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
+import PropTypes from 'prop-types';
 import Box from '../../foundation/box';
 import Text from '../../foundation/text';
 import Link from '../../common/link/link';
 import Container, { Description, Image, Info } from './style';
+
+const ExternalIcon = () => (
+  <svg
+    stroke="#fff"
+    fill="none"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    height="1em"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+    <polyline points="15 3 21 3 21 9" />
+    <line x1="10" y1="14" x2="21" y2="3" />
+  </svg>
+);
+
+const ExternalCompanyLink = ({ href }) => (
+  <a href={href} className="external_link">
+    <ExternalIcon />
+  </a>
+);
+
+ExternalCompanyLink.propTypes = {
+  href: PropTypes.string.isRequired,
+};
 
 const AboutMe = () => (
   <>
