@@ -129,21 +129,7 @@ const AboutMe = () => (
             <Text tag="h3" variant="subTitle">Senior Full Stack Engineer</Text>
             <div>
              Royal Bank of Canada, Montreal, QC
-              <a href="https://www.linkedin.com/company/rbc/" className="external_link">
-                <svg
-                  stroke="#fff"
-                  fill="none"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
+              <ExternalCompanyLink href="https://www.linkedin.com/company/rbc/" />
             </div>
             <div className="date">July 2025 - Present</div>
             <div className="work_description">
@@ -166,21 +152,7 @@ balances, and answer common FAQs securely.</li>
             {/* <div className="work_title">Software Developer - Cloud</div> */}
             <div>
               Genetec, Montreal, Canada
-              <a href="https://www.genetec.com/" className="external_link">
-                <svg
-                  stroke="#fff"
-                  fill="none"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
+              <ExternalCompanyLink href="https://www.genetec.com/" />
             </div>
             <div className="date">September 2023 - July 2025</div>
             <div className="work_description">
