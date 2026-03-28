@@ -316,21 +316,7 @@ balances, and answer common FAQs securely.</li>
             <Text tag="h3" variant="subTitle">B.Tech Computer Engineering</Text>
             <div>
               Chorotar University of Science & Technology, Anand, India
-              <a href="https://www.charusat.ac.in/" className="external_link">
-                <svg
-                  stroke="#fff"
-                  fill="none"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
+              <ExternalCompanyLink href="https://www.charusat.ac.in/" />
             </div>
             <div className="date">July 2018 - April 2022</div>
           </div>
@@ -428,19 +414,7 @@ balances, and answer common FAQs securely.</li>
                 2022 4th International Conference on Smart Systems
                 and Inventive Technology (ICSSIT), Tirunelveli, India,
                 2022, pp. 1588-1594, doi: 10.1109/ICSSIT53264.2022.9716541.
-                <svg
-                  stroke="#fff"
-                  fill="none"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
+                <ExternalIcon />
               </Text>
             </li>
             <li>
@@ -450,19 +424,7 @@ balances, and answer common FAQs securely.</li>
                 2021 5th International Conference on Electronics, Communication and
                 Aerospace Technology (ICECA), Coimbatore, India,
                 2021, pp. 369-376, doi: 10.1109/ICECA52323.2021.9676008.
-                <svg
-                  stroke="#fff"
-                  fill="none"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
+                <ExternalIcon />
               </Text>
             </li>
           </ul>
