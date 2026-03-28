@@ -275,21 +275,7 @@ balances, and answer common FAQs securely.</li>
             <Text tag="h3" variant="subTitle">Mobile Application Developer</Text>
             <div>
               Zibma Infotech, Surat, India
-              <a href="https://www.linkedin.com/company/zibma/" className="external_link">
-                <svg
-                  stroke="#fff"
-                  fill="none"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
+              <ExternalCompanyLink href="https://www.linkedin.com/company/zibma/" />
             </div>
             <div className="date"> May 2020 - August 2020</div>
             <div className="work_description">
@@ -324,21 +310,7 @@ balances, and answer common FAQs securely.</li>
             <Text tag="h3" variant="subTitle">Masters Of Applied Computer Science</Text>
             <div>
               Concordia University, Montreal, Canada
-              <a href="https://www.concordia.ca/" className="external_link">
-                <svg
-                  stroke="#fff"
-                  fill="none"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
+              <ExternalCompanyLink href="https://www.concordia.ca/" />
             </div>
             <div className="date">September 2022 - August 2024</div>
             <Text tag="h3" variant="subTitle">B.Tech Computer Engineering</Text>
