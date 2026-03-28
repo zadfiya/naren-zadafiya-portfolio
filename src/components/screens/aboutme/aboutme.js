@@ -31,6 +31,26 @@ ExternalCompanyLink.propTypes = {
   href: PropTypes.string.isRequired,
 };
 
+const SectionTitle = ({ children }) => (
+  <Text tag="h1" variant="title" className="title">{children}</Text>
+);
+
+SectionTitle.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+const BulletList = ({ items }) => (
+  <ul>
+    {items.map((item) => (
+      <li key={item}>{item}</li>
+    ))}
+  </ul>
+);
+
+BulletList.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
 const AboutMe = () => (
   <>
     <Container>
