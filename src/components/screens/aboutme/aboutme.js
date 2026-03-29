@@ -219,55 +219,23 @@ const AboutMe = () => (
               </ul>
             </div>
           </TimelineItem>
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Full Stack Developer</Text>
-            <div>
-              Renetech Digital, New York, USA
-              <ExternalCompanyLink href="https://rentechdigital.com/" />
-            </div>
-            <div className="date">Jan 2022 - December 2022</div>
+          <TimelineItem
+            title="Full Stack Developer"
+            organization="Renetech Digital, New York, USA"
+            orgUrl="https://rentechdigital.com/"
+            date="Jan 2022 - December 2022"
+          >
             <div className="work_description">
               <ul>
-                <li>
-                  <b>Led the backend team</b>
-                  {' '}
-                  in the making backend more Scalable, Secure, and Reliable in
-                  {' '}
-                  <b> Node.js</b>
-                  .
-                </li>
-                <li>
-                  Programmed a cron job to Synchronously fetched data from Google Cloud API,
-                  reducing manual data entry by
-                  <b> 70%.</b>
-                </li>
-                <li>
-                  Connected 2 interaction panels, user web panel (Next.JS) with admin panel
-                  (React) in the nginx.
-                </li>
-                <li>
-                  Implemented a functionality of
-                  <b> user segmentation</b>
-                  {' '}
-                  for targeting specific users, resulting 25% surge in engagement.
-                </li>
-                <li>
-                  Handled recurring payments & 1-time charges by implementing
-                  <b> The Stripe Payment Gateway service system</b>
-                  .
-                </li>
-                <li>
-                  Prepared different React component in
-                  <b> MVC micro architecture</b>
-                  {' '}
-                  framework which internally use various design patterns (2+)
-                  such as
-                  <b> singleton, factory</b>
-                  .
-                </li>
+                <li><b>Led the backend team</b> in the making backend more Scalable, Secure, and Reliable in <b>Node.js</b>.</li>
+                <li>Programmed a cron job to synchronously fetch data from Google Cloud API, reducing manual data entry by <b>70%.</b></li>
+                <li>Connected 2 interaction panels, user web panel (Next.JS) with admin panel (React) in nginx.</li>
+                <li>Implemented <b>user segmentation</b> for targeting specific users, resulting 25% surge in engagement.</li>
+                <li>Handled recurring payments and one-time charges by implementing <b>The Stripe Payment Gateway service system</b>.</li>
+                <li>Prepared React components in <b>MVC micro architecture</b> using patterns such as <b>singleton, factory</b>.</li>
               </ul>
             </div>
-          </div>
+          </TimelineItem>
           {/* <Text tag="h1" variant="title" className="title">Internship Experience</Text> */}
           <div className="section_content">
             <Text tag="h3" variant="subTitle">Software Developer Intern</Text>
