@@ -51,6 +51,32 @@ BulletList.propTypes = {
   items: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
+const TimelineItem = ({ title, organization, orgUrl, date, children }) => (
+  <div className="section_content">
+    <Text tag="h3" variant="subTitle">{title}</Text>
+    <div>
+      {organization}
+      {orgUrl ? <ExternalCompanyLink href={orgUrl} /> : null}
+    </div>
+    {date ? <div className="date">{date}</div> : null}
+    {children}
+  </div>
+);
+
+TimelineItem.defaultProps = {
+  orgUrl: '',
+  date: '',
+  children: null,
+};
+
+TimelineItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  organization: PropTypes.string.isRequired,
+  orgUrl: PropTypes.string,
+  date: PropTypes.string,
+  children: PropTypes.node,
+};
+
 const AboutMe = () => (
   <>
     <Container>
