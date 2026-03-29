@@ -171,28 +171,27 @@ const AboutMe = () => (
       <div className="container">
         <div className="left-column">
           <Text tag="h1" variant="title" className="title">Work Experience</Text>
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Senior Full Stack Engineer</Text>
-            <div>
-             Royal Bank of Canada, Montreal, QC
-              <ExternalCompanyLink href="https://www.linkedin.com/company/rbc/" />
-            </div>
-            <div className="date">July 2025 - Present</div>
+          <TimelineItem
+            title="Senior Full Stack Engineer"
+            organization="Royal Bank of Canada, Montreal, QC"
+            orgUrl="https://www.linkedin.com/company/rbc/"
+            date="July 2025 - Present"
+          >
             <div className="work_description">
               <ul>
                 <li>
                   Build a conversational <b>AI</b> agent using <b> retrieval-augmented generation (RAG) </b> that can access bank policies, check basic account
-balances, and answer common FAQs securely.</li>
-  <li>
-    Integrated <b>TMX </b> with <b>ML</b>  based anomaly detection to assess risk scores, reducing false authentication challenges by <b>15%</b>.
-  </li>
-                  <li>
+                  balances, and answer common FAQs securely.
+                </li>
+                <li>
+                  Integrated <b>TMX </b> with <b>ML</b> based anomaly detection to assess risk scores, reducing false authentication challenges by <b>15%</b>.
+                </li>
+                <li>
                   Enhanced credit,debit card security by implementing encryption, safeguarding sensitive data for <b>100K+</b> daily transactions.
-                  </li>
-                
+                </li>
               </ul>
             </div>
-          </div>
+          </TimelineItem>
           <div className="section_content">
             <Text tag="h3" variant="subTitle">Software Developer - Cloud Operation</Text>
             {/* <div className="work_title">Software Developer - Cloud</div> */}
