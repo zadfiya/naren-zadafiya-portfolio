@@ -192,49 +192,33 @@ const AboutMe = () => (
               </ul>
             </div>
           </TimelineItem>
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Software Developer - Cloud Operation</Text>
-            {/* <div className="work_title">Software Developer - Cloud</div> */}
-            <div>
-              Genetec, Montreal, Canada
-              <ExternalCompanyLink href="https://www.genetec.com/" />
-            </div>
-            <div className="date">September 2023 - July 2025</div>
+          <TimelineItem
+            title="Software Developer - Cloud Operation"
+            organization="Genetec, Montreal, Canada"
+            orgUrl="https://www.genetec.com/"
+            date="September 2023 - July 2025"
+          >
             <div className="work_description">
               <ul>
                 <li>
-                  Designed a
-                  <b> Microservice architecture</b>
-                  {' '}
-                  and implemented
-                  <b> 3</b>
-                  {' '}
-                  distinct services, leading to improvement in system uptime.
+                  Designed a <b>Microservice architecture</b> and implemented <b>3</b> distinct services,
+                  leading to improvement in system uptime.
                 </li>
                 <li>
-                  Developed
-                  <b> RESTful APIs</b>
-                  {' '}
-                  using .NET Core, ensuring data integrity and security, with
-                  <b> zero data breaches</b>
-                  {' '}
-                  during my tenure.
+                  Developed <b>RESTful APIs</b> using .NET Core, ensuring data integrity and security,
+                  with <b>zero data breaches</b> during my tenure.
                 </li>
                 <li>
-                  Applied
-                  <b> Dependency Injection pattern</b>
-                  {' '}
-                  in projects, improving code modularity and accelerating development to 1.3x.
+                  Applied <b>Dependency Injection pattern</b> in projects, improving code modularity and
+                  accelerating development to 1.3x.
                 </li>
                 <li>
-                  Enhanced
-                  <b> Genetec`s</b>
-                  {' '}
-                  cloud service deployments with automation techniques and scripts in powershell.
+                  Enhanced <b>Genetec`s</b> cloud service deployments with automation techniques and scripts
+                  in powershell.
                 </li>
               </ul>
             </div>
-          </div>
+          </TimelineItem>
           <div className="section_content">
             <Text tag="h3" variant="subTitle">Full Stack Developer</Text>
             <div>
