@@ -77,6 +77,20 @@ TimelineItem.propTypes = {
   children: PropTypes.node,
 };
 
+const SkillCategory = ({ title, items }) => (
+  <div className="section_content">
+    <Text tag="h3" variant="subTitle">{title}</Text>
+    <div>
+      <BulletList items={items} />
+    </div>
+  </div>
+);
+
+SkillCategory.propTypes = {
+  title: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
 const AboutMe = () => (
   <>
     <Container>
