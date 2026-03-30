@@ -237,37 +237,29 @@ const AboutMe = () => (
             </div>
           </TimelineItem>
           {/* <Text tag="h1" variant="title" className="title">Internship Experience</Text> */}
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Software Developer Intern</Text>
-            <div>
-              Rentech Digital, New York, USA
-              <ExternalCompanyLink href="https://rentechdigital.com/" />
-            </div>
-            <div className="date"> June 2021 - August 2021</div>
+          <TimelineItem
+            title="Software Developer Intern"
+            organization="Rentech Digital, New York, USA"
+            orgUrl="https://rentechdigital.com/"
+            date="June 2021 - August 2021"
+          >
             <div className="work_description">
               <ul>
                 <li>
-                  Experienced in working with Redux architecture using complex
-                  <b> Object-Oriented concepts</b>
-                  {' '}
-                  in improving the performance of the
-                  websites to 1.5 sec.
+                  Experienced in working with Redux architecture using complex <b>Object-Oriented concepts</b>
+                  in improving the performance of websites to 1.5 sec.
                 </li>
                 <li>
-                  Improved initial loading time of the web page of the existing site from
-                  <b> 7 Sec to under 3 Sec</b>
-                  {' '}
-                  by caching data on UI, reducing
-                  server call and stopping re-rendering of components.
+                  Improved initial loading time of the web page of the existing site from <b>7 sec to under 3 sec</b>
+                  by caching data on UI, reducing server call and stopping re-rendering of components.
                 </li>
                 <li>
-                  Integrated the application with third-party services and external APIs, Utilized
-                  <b> TanStack queries</b>
-                  , as part of the implementation.
+                  Integrated the application with third-party services and external APIs, utilized
+                  <b> TanStack queries</b> as part of the implementation.
                 </li>
               </ul>
             </div>
-          </div>
+          </TimelineItem>
           <div className="section_content">
             <Text tag="h3" variant="subTitle">Mobile Application Developer</Text>
             <div>
