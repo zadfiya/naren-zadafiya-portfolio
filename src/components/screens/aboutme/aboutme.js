@@ -260,38 +260,27 @@ const AboutMe = () => (
               </ul>
             </div>
           </TimelineItem>
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Mobile Application Developer</Text>
-            <div>
-              Zibma Infotech, Surat, India
-              <ExternalCompanyLink href="https://www.linkedin.com/company/zibma/" />
-            </div>
-            <div className="date"> May 2020 - August 2020</div>
+          <TimelineItem
+            title="Mobile Application Developer"
+            organization="Zibma Infotech, Surat, India"
+            orgUrl="https://www.linkedin.com/company/zibma/"
+            date="May 2020 - August 2020"
+          >
             <div className="work_description">
               <ul>
                 <li>
-                  Build an elegant UI by utilizing various android widgets with
-                  webview in order to load webpage for
-                  <b> The Ranch Simulator Game</b>
-                  .
+                  Built an elegant UI by utilizing android widgets with webview in order to load webpage for
+                  <b> The Ranch Simulator Game</b>.
                 </li>
                 <li>
-                  <b>Parsed JSON</b>
-                  {' '}
-                  data and handle API for data loading, used
-                  {' '}
-                  <b> Firestore</b>
-                  {' '}
-                  for storing realtime data.
+                  <b>Parsed JSON</b> data and handled API data loading, used <b>Firestore</b> for storing realtime data.
                 </li>
                 <li>
-                  Contributed to the deployment process, including app
-                  submission to app stores (Google Play)
-                  , ensuring successful releases.
+                  Contributed to the deployment process, including app submission to Google Play, ensuring successful releases.
                 </li>
               </ul>
             </div>
-          </div>
+          </TimelineItem>
         </div>
         <div className="right-column">
           <Text tag="h1" variant="title" className="title">Education</Text>
