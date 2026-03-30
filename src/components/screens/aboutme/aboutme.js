@@ -284,20 +284,18 @@ const AboutMe = () => (
         </div>
         <div className="right-column">
           <Text tag="h1" variant="title" className="title">Education</Text>
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Masters Of Applied Computer Science</Text>
-            <div>
-              Concordia University, Montreal, Canada
-              <ExternalCompanyLink href="https://www.concordia.ca/" />
-            </div>
-            <div className="date">September 2022 - August 2024</div>
-            <Text tag="h3" variant="subTitle">B.Tech Computer Engineering</Text>
-            <div>
-              Chorotar University of Science & Technology, Anand, India
-              <ExternalCompanyLink href="https://www.charusat.ac.in/" />
-            </div>
-            <div className="date">July 2018 - April 2022</div>
-          </div>
+          <TimelineItem
+            title="Masters Of Applied Computer Science"
+            organization="Concordia University, Montreal, Canada"
+            orgUrl="https://www.concordia.ca/"
+            date="September 2022 - August 2024"
+          />
+          <TimelineItem
+            title="B.Tech Computer Engineering"
+            organization="Chorotar University of Science & Technology, Anand, India"
+            orgUrl="https://www.charusat.ac.in/"
+            date="July 2018 - April 2022"
+          />
           <Text tag="h1" variant="title" className="title">Skills</Text>
           <div className="section_content">
             <Text tag="h3" variant="subTitle">Languages</Text>
