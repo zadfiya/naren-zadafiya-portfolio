@@ -311,20 +311,18 @@ const AboutMe = () => (
             date="July 2018 - April 2022"
           />
           <Text tag="h1" variant="title" className="title">Skills</Text>
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Languages</Text>
-            <div>
-              <ul>
-                <li>Java</li>
-                <li>C#</li>
-                <li>Python</li>
-                <li>C++</li>
-                <li>TypeScript</li>
-                <li>JavaScript</li>
-                <li>GoLang</li>
-              </ul>
-            </div>
-          </div>
+          <SkillCategory
+            title="Languages"
+            items={[
+              'Java',
+              'C#',
+              'Python',
+              'C++',
+              'TypeScript',
+              'JavaScript',
+              'GoLang',
+            ]}
+          />
           <div className="section_content">
             <Text tag="h3" variant="subTitle">Technologies</Text>
             <div>
