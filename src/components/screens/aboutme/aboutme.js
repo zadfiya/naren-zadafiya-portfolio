@@ -323,19 +323,17 @@ const AboutMe = () => (
               'GoLang',
             ]}
           />
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Technologies</Text>
-            <div>
-              <ul>
-                <li>React</li>
-                <li>Node</li>
-                <li>.Net core</li>
-                <li>SpringBoot</li>
-                <li>Django</li>
-                <li>Flask</li>
-              </ul>
-            </div>
-          </div>
+          <SkillCategory
+            title="Technologies"
+            items={[
+              'React',
+              'Node',
+              '.Net core',
+              'SpringBoot',
+              'Django',
+              'Flask',
+            ]}
+          />
           <div className="section_content">
             <Text tag="h3" variant="subTitle">Database</Text>
             <div>
