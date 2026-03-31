@@ -334,18 +334,16 @@ const AboutMe = () => (
               'Flask',
             ]}
           />
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Database</Text>
-            <div>
-              <ul>
-                <li>PostgreSQL</li>
-                <li>MongoDB</li>
-                <li>MS SQL Server</li>
-                <li>MySQL</li>
-                <li>Azure Tables/CosmosDB</li>
-              </ul>
-            </div>
-          </div>
+          <SkillCategory
+            title="Database"
+            items={[
+              'PostgreSQL',
+              'MongoDB',
+              'MS SQL Server',
+              'MySQL',
+              'Azure Tables/CosmosDB',
+            ]}
+          />
           <div className="section_content">
             <Text tag="h3" variant="subTitle">Event Driven Architecture - AMQT</Text>
             <div>
