@@ -344,18 +344,16 @@ const AboutMe = () => (
               'Azure Tables/CosmosDB',
             ]}
           />
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Event Driven Architecture - AMQT</Text>
-            <div>
-              <ul>
-                <li>Microservice</li>
-                <li>RabitMQ</li>
-                <li>SignalR</li>
-                <li>Azure Bus Service</li>
-                <li>Mass Transit</li>
-              </ul>
-            </div>
-          </div>
+          <SkillCategory
+            title="Event Driven Architecture - AMQT"
+            items={[
+              'Microservice',
+              'RabitMQ',
+              'SignalR',
+              'Azure Bus Service',
+              'Mass Transit',
+            ]}
+          />
           <div className="section_content">
             <Text tag="h3" variant="subTitle">Cloud/DevOps</Text>
             <div>
