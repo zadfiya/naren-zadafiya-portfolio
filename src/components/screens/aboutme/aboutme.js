@@ -407,16 +407,13 @@ const AboutMe = () => (
               and Inventive Technology (ICSSIT), Tirunelveli, India,
               2022, pp. 1588-1594, doi: 10.1109/ICSSIT53264.2022.9716541.
             </PublicationItem>
-            <li>
-              <Text tag="p" variant="paragraph1" href="https://ieeexplore.ieee.org/document/9676008" target="_blank">
-                <b>A Ratiocinative Concept of Algorithmic Trading using MACD Indicator</b>
-                ,
-                2021 5th International Conference on Electronics, Communication and
-                Aerospace Technology (ICECA), Coimbatore, India,
-                2021, pp. 369-376, doi: 10.1109/ICECA52323.2021.9676008.
-                <ExternalIcon />
-              </Text>
-            </li>
+            <PublicationItem href="https://ieeexplore.ieee.org/document/9676008">
+              <b>A Ratiocinative Concept of Algorithmic Trading using MACD Indicator</b>
+              ,
+              2021 5th International Conference on Electronics, Communication and
+              Aerospace Technology (ICECA), Coimbatore, India,
+              2021, pp. 369-376, doi: 10.1109/ICECA52323.2021.9676008.
+            </PublicationItem>
           </ul>
         </div>
       </div>
