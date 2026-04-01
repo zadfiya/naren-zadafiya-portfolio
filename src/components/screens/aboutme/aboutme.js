@@ -91,6 +91,22 @@ SkillCategory.propTypes = {
   items: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
+const PublicationItem = ({ href, children }) => (
+  <li>
+    <a href={href} target="_blank" rel="noreferrer" className="external_link">
+      <Text tag="p" variant="paragraph1">
+        {children}
+        <ExternalIcon />
+      </Text>
+    </a>
+  </li>
+);
+
+PublicationItem.propTypes = {
+  href: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};
+
 const AboutMe = () => (
   <>
     <Container>
