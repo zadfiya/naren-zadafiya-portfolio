@@ -365,19 +365,16 @@ const AboutMe = () => (
               'Terraform',
             ]}
           />
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Observality</Text>
-            <div>
-              <ul>
-                <li>Dynatrace</li>
-                <li>Azure Appinsights</li>
-                <li>ELK</li>
-                <li>AWS CloudWatch</li>
-                <li>Splunk</li>
-              </ul>
-            </div>
-            
-          </div>
+          <SkillCategory
+            title="Observality"
+            items={[
+              'Dynatrace',
+              'Azure Appinsights',
+              'ELK',
+              'AWS CloudWatch',
+              'Splunk',
+            ]}
+          />
         </div>
       </div>
       <div>
