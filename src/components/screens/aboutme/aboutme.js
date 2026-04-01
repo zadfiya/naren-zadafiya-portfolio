@@ -354,19 +354,17 @@ const AboutMe = () => (
               'Mass Transit',
             ]}
           />
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Cloud/DevOps</Text>
-            <div>
-              <ul>
-                <li>Nginx</li>
-                <li>Azure</li>
-                <li>AWS</li>
-                <li>Docker</li>
-                <li>Kubernetes</li>
-                <li>Terraform</li>
-              </ul>
-            </div>
-          </div>
+          <SkillCategory
+            title="Cloud/DevOps"
+            items={[
+              'Nginx',
+              'Azure',
+              'AWS',
+              'Docker',
+              'Kubernetes',
+              'Terraform',
+            ]}
+          />
           <div className="section_content">
             <Text tag="h3" variant="subTitle">Observality</Text>
             <div>
