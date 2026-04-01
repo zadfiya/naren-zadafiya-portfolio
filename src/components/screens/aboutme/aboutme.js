@@ -397,19 +397,16 @@ const AboutMe = () => (
         <Text tag="h1" variant="title">Publications</Text>
         <div className="work_description">
           <ul>
-            <li>
-              <Text tag="p" variant="paragraph1" href="https://ieeexplore.ieee.org/document/9716541" target="_blank">
-                <b>
-                  Detecting Credit Card Frauds Using Isolation Forest And Local
-                  Outlier Factor - Analytical Insights
-                </b>
-                ,
-                2022 4th International Conference on Smart Systems
-                and Inventive Technology (ICSSIT), Tirunelveli, India,
-                2022, pp. 1588-1594, doi: 10.1109/ICSSIT53264.2022.9716541.
-                <ExternalIcon />
-              </Text>
-            </li>
+            <PublicationItem href="https://ieeexplore.ieee.org/document/9716541">
+              <b>
+                Detecting Credit Card Frauds Using Isolation Forest And Local
+                Outlier Factor - Analytical Insights
+              </b>
+              ,
+              2022 4th International Conference on Smart Systems
+              and Inventive Technology (ICSSIT), Tirunelveli, India,
+              2022, pp. 1588-1594, doi: 10.1109/ICSSIT53264.2022.9716541.
+            </PublicationItem>
             <li>
               <Text tag="p" variant="paragraph1" href="https://ieeexplore.ieee.org/document/9676008" target="_blank">
                 <b>A Ratiocinative Concept of Algorithmic Trading using MACD Indicator</b>
