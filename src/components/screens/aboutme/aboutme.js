@@ -107,9 +107,31 @@ PublicationItem.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-const AboutMe = () => (
-  <>
-    <Container>
+const AboutMe = () => {
+  const sectionKeys = useMemo(() => ({
+    work: 'work',
+    education: 'education',
+    skills: 'skills',
+    publications: 'publications',
+  }), []);
+
+  const [openSections, setOpenSections] = useState({
+    [sectionKeys.work]: true,
+    [sectionKeys.education]: true,
+    [sectionKeys.skills]: true,
+    [sectionKeys.publications]: true,
+  });
+
+  const toggleSection = (sectionKey) => {
+    setOpenSections((prev) => ({
+      ...prev,
+      [sectionKey]: !prev[sectionKey],
+    }));
+  };
+
+  return (
+    <>
+      <Container>
       <Text tag="h1" variant="titleXS">About Me</Text>
       <Box
         display="flex"
@@ -417,8 +439,9 @@ const AboutMe = () => (
           </ul>
         </div>
       </div>
-    </Container>
-  </>
-);
+      </Container>
+    </>
+  );
+};
 
 export default AboutMe;
