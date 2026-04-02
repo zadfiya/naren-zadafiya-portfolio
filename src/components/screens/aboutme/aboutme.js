@@ -378,71 +378,79 @@ const AboutMe = () => {
               />
             </>
           ) : null}
-          <Text tag="h1" variant="title" className="title">Skills</Text>
-          <SkillCategory
-            title="Languages"
-            items={[
-              'Java',
-              'C#',
-              'Python',
-              'C++',
-              'TypeScript',
-              'JavaScript',
-              'GoLang',
-            ]}
+          <SectionHeaderToggle
+            title="Skills"
+            isOpen={openSections[sectionKeys.skills]}
+            onToggle={() => toggleSection(sectionKeys.skills)}
           />
-          <SkillCategory
-            title="Technologies"
-            items={[
-              'React',
-              'Node',
-              '.Net core',
-              'SpringBoot',
-              'Django',
-              'Flask',
-            ]}
-          />
-          <SkillCategory
-            title="Database"
-            items={[
-              'PostgreSQL',
-              'MongoDB',
-              'MS SQL Server',
-              'MySQL',
-              'Azure Tables/CosmosDB',
-            ]}
-          />
-          <SkillCategory
-            title="Event Driven Architecture - AMQT"
-            items={[
-              'Microservice',
-              'RabitMQ',
-              'SignalR',
-              'Azure Bus Service',
-              'Mass Transit',
-            ]}
-          />
-          <SkillCategory
-            title="Cloud/DevOps"
-            items={[
-              'Nginx',
-              'Azure',
-              'AWS',
-              'Docker',
-              'Kubernetes',
-              'Terraform',
-            ]}
-          />
-          <SkillCategory
-            title="Observality"
-            items={[
-              'Dynatrace',
-              'Azure Appinsights',
-              'ELK',
-              'AWS CloudWatch',
-              'Splunk',
-            ]}
-          />
+          {openSections[sectionKeys.skills] ? (
+            <>
+              <SkillCategory
+                title="Languages"
+                items={[
+                  'Java',
+                  'C#',
+                  'Python',
+                  'C++',
+                  'TypeScript',
+                  'JavaScript',
+                  'GoLang',
+                ]}
+              />
+              <SkillCategory
+                title="Technologies"
+                items={[
+                  'React',
+                  'Node',
+                  '.Net core',
+                  'SpringBoot',
+                  'Django',
+                  'Flask',
+                ]}
+              />
+              <SkillCategory
+                title="Database"
+                items={[
+                  'PostgreSQL',
+                  'MongoDB',
+                  'MS SQL Server',
+                  'MySQL',
+                  'Azure Tables/CosmosDB',
+                ]}
+              />
+              <SkillCategory
+                title="Event Driven Architecture - AMQT"
+                items={[
+                  'Microservice',
+                  'RabitMQ',
+                  'SignalR',
+                  'Azure Bus Service',
+                  'Mass Transit',
+                ]}
+              />
+              <SkillCategory
+                title="Cloud/DevOps"
+                items={[
+                  'Nginx',
+                  'Azure',
+                  'AWS',
+                  'Docker',
+                  'Kubernetes',
+                  'Terraform',
+                ]}
+              />
+              <SkillCategory
+                title="Observality"
+                items={[
+                  'Dynatrace',
+                  'Azure Appinsights',
+                  'ELK',
+                  'AWS CloudWatch',
+                  'Splunk',
+                ]}
+              />
+            </>
+          ) : null}
         </div>
       </div>
       <div>
