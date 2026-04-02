@@ -107,6 +107,21 @@ PublicationItem.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
+const SectionHeaderToggle = ({ title, isOpen, onToggle }) => (
+  <div className="section_header" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+    <SectionTitle>{title}</SectionTitle>
+    <button type="button" className="section_toggle" onClick={onToggle}>
+      {isOpen ? 'Hide' : 'Show'}
+    </button>
+  </div>
+);
+
+SectionHeaderToggle.propTypes = {
+  title: PropTypes.string.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  onToggle: PropTypes.func.isRequired,
+};
+
 const AboutMe = () => {
   const sectionKeys = useMemo(() => ({
     work: 'work',
@@ -222,117 +237,124 @@ const AboutMe = () => {
       </Box>
       <div className="container">
         <div className="left-column">
-          <Text tag="h1" variant="title" className="title">Work Experience</Text>
-          <TimelineItem
-            title="Senior Full Stack Engineer"
-            organization="Royal Bank of Canada, Montreal, QC"
-            orgUrl="https://www.linkedin.com/company/rbc/"
-            date="July 2025 - Present"
-          >
-            <div className="work_description">
-              <ul>
-                <li>
-                  Build a conversational <b>AI</b> agent using <b> retrieval-augmented generation (RAG) </b> that can access bank policies, check basic account
-                  balances, and answer common FAQs securely.
-                </li>
-                <li>
-                  Integrated <b>TMX </b> with <b>ML</b> based anomaly detection to assess risk scores, reducing false authentication challenges by <b>15%</b>.
-                </li>
-                <li>
-                  Enhanced credit,debit card security by implementing encryption, safeguarding sensitive data for <b>100K+</b> daily transactions.
-                </li>
-              </ul>
-            </div>
-          </TimelineItem>
-          <TimelineItem
-            title="Software Developer - Cloud Operation"
-            organization="Genetec, Montreal, Canada"
-            orgUrl="https://www.genetec.com/"
-            date="September 2023 - July 2025"
-          >
-            <div className="work_description">
-              <ul>
-                <li>
-                  Designed a <b>Microservice architecture</b> and implemented <b>3</b> distinct services,
-                  leading to improvement in system uptime.
-                </li>
-                <li>
-                  Developed <b>RESTful APIs</b> using .NET Core, ensuring data integrity and security,
-                  with <b>zero data breaches</b> during my tenure.
-                </li>
-                <li>
-                  Applied <b>Dependency Injection pattern</b> in projects, improving code modularity and
-                  accelerating development to 1.3x.
-                </li>
-                <li>
-                  Enhanced <b>Genetec`s</b> cloud service deployments with automation techniques and scripts
-                  in powershell.
-                </li>
-              </ul>
-            </div>
-          </TimelineItem>
-          <TimelineItem
-            title="Full Stack Developer"
-            organization="Renetech Digital, New York, USA"
-            orgUrl="https://rentechdigital.com/"
-            date="Jan 2022 - December 2022"
-          >
-            <div className="work_description">
-              <ul>
-                <li><b>Led the backend team</b> in the making backend more Scalable, Secure, and Reliable in <b>Node.js</b>.</li>
-                <li>Programmed a cron job to synchronously fetch data from Google Cloud API, reducing manual data entry by <b>70%.</b></li>
-                <li>Connected 2 interaction panels, user web panel (Next.JS) with admin panel (React) in nginx.</li>
-                <li>Implemented <b>user segmentation</b> for targeting specific users, resulting 25% surge in engagement.</li>
-                <li>Handled recurring payments and one-time charges by implementing <b>The Stripe Payment Gateway service system</b>.</li>
-                <li>Prepared React components in <b>MVC micro architecture</b> using patterns such as <b>singleton, factory</b>.</li>
-              </ul>
-            </div>
-          </TimelineItem>
-          {/* <Text tag="h1" variant="title" className="title">Internship Experience</Text> */}
-          <TimelineItem
-            title="Software Developer Intern"
-            organization="Rentech Digital, New York, USA"
-            orgUrl="https://rentechdigital.com/"
-            date="June 2021 - August 2021"
-          >
-            <div className="work_description">
-              <ul>
-                <li>
-                  Experienced in working with Redux architecture using complex <b>Object-Oriented concepts</b>
-                  in improving the performance of websites to 1.5 sec.
-                </li>
-                <li>
-                  Improved initial loading time of the web page of the existing site from <b>7 sec to under 3 sec</b>
-                  by caching data on UI, reducing server call and stopping re-rendering of components.
-                </li>
-                <li>
-                  Integrated the application with third-party services and external APIs, utilized
-                  <b> TanStack queries</b> as part of the implementation.
-                </li>
-              </ul>
-            </div>
-          </TimelineItem>
-          <TimelineItem
-            title="Mobile Application Developer"
-            organization="Zibma Infotech, Surat, India"
-            orgUrl="https://www.linkedin.com/company/zibma/"
-            date="May 2020 - August 2020"
-          >
-            <div className="work_description">
-              <ul>
-                <li>
-                  Built an elegant UI by utilizing android widgets with webview in order to load webpage for
-                  <b> The Ranch Simulator Game</b>.
-                </li>
-                <li>
-                  <b>Parsed JSON</b> data and handled API data loading, used <b>Firestore</b> for storing realtime data.
-                </li>
-                <li>
-                  Contributed to the deployment process, including app submission to Google Play, ensuring successful releases.
-                </li>
-              </ul>
-            </div>
-          </TimelineItem>
+          <SectionHeaderToggle
+            title="Work Experience"
+            isOpen={openSections[sectionKeys.work]}
+            onToggle={() => toggleSection(sectionKeys.work)}
+          />
+          {openSections[sectionKeys.work] ? (
+            <>
+              <TimelineItem
+                title="Senior Full Stack Engineer"
+                organization="Royal Bank of Canada, Montreal, QC"
+                orgUrl="https://www.linkedin.com/company/rbc/"
+                date="July 2025 - Present"
+              >
+                <div className="work_description">
+                  <ul>
+                    <li>
+                      Build a conversational <b>AI</b> agent using <b> retrieval-augmented generation (RAG) </b> that can access bank policies, check basic account
+                      balances, and answer common FAQs securely.
+                    </li>
+                    <li>
+                      Integrated <b>TMX </b> with <b>ML</b> based anomaly detection to assess risk scores, reducing false authentication challenges by <b>15%</b>.
+                    </li>
+                    <li>
+                      Enhanced credit,debit card security by implementing encryption, safeguarding sensitive data for <b>100K+</b> daily transactions.
+                    </li>
+                  </ul>
+                </div>
+              </TimelineItem>
+              <TimelineItem
+                title="Software Developer - Cloud Operation"
+                organization="Genetec, Montreal, Canada"
+                orgUrl="https://www.genetec.com/"
+                date="September 2023 - July 2025"
+              >
+                <div className="work_description">
+                  <ul>
+                    <li>
+                      Designed a <b>Microservice architecture</b> and implemented <b>3</b> distinct services,
+                      leading to improvement in system uptime.
+                    </li>
+                    <li>
+                      Developed <b>RESTful APIs</b> using .NET Core, ensuring data integrity and security,
+                      with <b>zero data breaches</b> during my tenure.
+                    </li>
+                    <li>
+                      Applied <b>Dependency Injection pattern</b> in projects, improving code modularity and
+                      accelerating development to 1.3x.
+                    </li>
+                    <li>
+                      Enhanced <b>Genetec`s</b> cloud service deployments with automation techniques and scripts
+                      in powershell.
+                    </li>
+                  </ul>
+                </div>
+              </TimelineItem>
+              <TimelineItem
+                title="Full Stack Developer"
+                organization="Renetech Digital, New York, USA"
+                orgUrl="https://rentechdigital.com/"
+                date="Jan 2022 - December 2022"
+              >
+                <div className="work_description">
+                  <ul>
+                    <li><b>Led the backend team</b> in the making backend more Scalable, Secure, and Reliable in <b>Node.js</b>.</li>
+                    <li>Programmed a cron job to synchronously fetch data from Google Cloud API, reducing manual data entry by <b>70%.</b></li>
+                    <li>Connected 2 interaction panels, user web panel (Next.JS) with admin panel (React) in nginx.</li>
+                    <li>Implemented <b>user segmentation</b> for targeting specific users, resulting 25% surge in engagement.</li>
+                    <li>Handled recurring payments and one-time charges by implementing <b>The Stripe Payment Gateway service system</b>.</li>
+                    <li>Prepared React components in <b>MVC micro architecture</b> using patterns such as <b>singleton, factory</b>.</li>
+                  </ul>
+                </div>
+              </TimelineItem>
+              <TimelineItem
+                title="Software Developer Intern"
+                organization="Rentech Digital, New York, USA"
+                orgUrl="https://rentechdigital.com/"
+                date="June 2021 - August 2021"
+              >
+                <div className="work_description">
+                  <ul>
+                    <li>
+                      Experienced in working with Redux architecture using complex <b>Object-Oriented concepts</b>
+                      in improving the performance of websites to 1.5 sec.
+                    </li>
+                    <li>
+                      Improved initial loading time of the web page of the existing site from <b>7 sec to under 3 sec</b>
+                      by caching data on UI, reducing server call and stopping re-rendering of components.
+                    </li>
+                    <li>
+                      Integrated the application with third-party services and external APIs, utilized
+                      <b> TanStack queries</b> as part of the implementation.
+                    </li>
+                  </ul>
+                </div>
+              </TimelineItem>
+              <TimelineItem
+                title="Mobile Application Developer"
+                organization="Zibma Infotech, Surat, India"
+                orgUrl="https://www.linkedin.com/company/zibma/"
+                date="May 2020 - August 2020"
+              >
+                <div className="work_description">
+                  <ul>
+                    <li>
+                      Built an elegant UI by utilizing android widgets with webview in order to load webpage for
+                      <b> The Ranch Simulator Game</b>.
+                    </li>
+                    <li>
+                      <b>Parsed JSON</b> data and handled API data loading, used <b>Firestore</b> for storing realtime data.
+                    </li>
+                    <li>
+                      Contributed to the deployment process, including app submission to Google Play, ensuring successful releases.
+                    </li>
+                  </ul>
+                </div>
+              </TimelineItem>
+            </>
+          ) : null}
         </div>
         <div className="right-column">
           <Text tag="h1" variant="title" className="title">Education</Text>
