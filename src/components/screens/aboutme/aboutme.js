@@ -357,19 +357,27 @@ const AboutMe = () => {
           ) : null}
         </div>
         <div className="right-column">
-          <Text tag="h1" variant="title" className="title">Education</Text>
-          <TimelineItem
-            title="Masters Of Applied Computer Science"
-            organization="Concordia University, Montreal, Canada"
-            orgUrl="https://www.concordia.ca/"
-            date="September 2022 - August 2024"
+          <SectionHeaderToggle
+            title="Education"
+            isOpen={openSections[sectionKeys.education]}
+            onToggle={() => toggleSection(sectionKeys.education)}
           />
-          <TimelineItem
-            title="B.Tech Computer Engineering"
-            organization="Chorotar University of Science & Technology, Anand, India"
-            orgUrl="https://www.charusat.ac.in/"
-            date="July 2018 - April 2022"
-          />
+          {openSections[sectionKeys.education] ? (
+            <>
+              <TimelineItem
+                title="Masters Of Applied Computer Science"
+                organization="Concordia University, Montreal, Canada"
+                orgUrl="https://www.concordia.ca/"
+                date="September 2022 - August 2024"
+              />
+              <TimelineItem
+                title="B.Tech Computer Engineering"
+                organization="Chorotar University of Science & Technology, Anand, India"
+                orgUrl="https://www.charusat.ac.in/"
+                date="July 2018 - April 2022"
+              />
+            </>
+          ) : null}
           <Text tag="h1" variant="title" className="title">Skills</Text>
           <SkillCategory
             title="Languages"
