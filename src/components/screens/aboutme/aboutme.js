@@ -51,6 +51,18 @@ BulletList.propTypes = {
   items: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
+const RichBulletList = ({ items }) => (
+  <ul>
+    {items.map((item, index) => (
+      <li key={`rich-item-${index + 1}`}>{item}</li>
+    ))}
+  </ul>
+);
+
+RichBulletList.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.node).isRequired,
+};
+
 const TimelineItem = ({ title, organization, orgUrl, date, children }) => (
   <div className="section_content">
     <Text tag="h3" variant="subTitle">{title}</Text>
@@ -308,18 +320,22 @@ const AboutMe = () => {
                 date="July 2025 - Present"
               >
                 <div className="work_description">
-                  <ul>
-                    <li>
-                      Build a conversational <b>AI</b> agent using <b> retrieval-augmented generation (RAG) </b> that can access bank policies, check basic account
-                      balances, and answer common FAQs securely.
-                    </li>
-                    <li>
-                      Integrated <b>TMX </b> with <b>ML</b> based anomaly detection to assess risk scores, reducing false authentication challenges by <b>15%</b>.
-                    </li>
-                    <li>
-                      Enhanced credit,debit card security by implementing encryption, safeguarding sensitive data for <b>100K+</b> daily transactions.
-                    </li>
-                  </ul>
+                  <RichBulletList
+                    items={[
+                      <>
+                        Build a conversational <b>AI</b> agent using <b> retrieval-augmented generation (RAG) </b>
+                        that can access bank policies, check basic account balances, and answer common FAQs securely.
+                      </>,
+                      <>
+                        Integrated <b>TMX </b> with <b>ML</b> based anomaly detection to assess risk scores,
+                        reducing false authentication challenges by <b>15%</b>.
+                      </>,
+                      <>
+                        Enhanced credit,debit card security by implementing encryption, safeguarding sensitive data for
+                        <b> 100K+</b> daily transactions.
+                      </>,
+                    ]}
+                  />
                 </div>
               </TimelineItem>
               <TimelineItem
