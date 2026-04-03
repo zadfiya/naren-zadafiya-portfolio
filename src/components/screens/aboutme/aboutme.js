@@ -454,28 +454,34 @@ const AboutMe = () => {
         </div>
       </div>
       <div>
-        <Text tag="h1" variant="title">Publications</Text>
-        <div className="work_description">
-          <ul>
-            <PublicationItem href="https://ieeexplore.ieee.org/document/9716541">
-              <b>
-                Detecting Credit Card Frauds Using Isolation Forest And Local
-                Outlier Factor - Analytical Insights
-              </b>
-              ,
-              2022 4th International Conference on Smart Systems
-              and Inventive Technology (ICSSIT), Tirunelveli, India,
-              2022, pp. 1588-1594, doi: 10.1109/ICSSIT53264.2022.9716541.
-            </PublicationItem>
-            <PublicationItem href="https://ieeexplore.ieee.org/document/9676008">
-              <b>A Ratiocinative Concept of Algorithmic Trading using MACD Indicator</b>
-              ,
-              2021 5th International Conference on Electronics, Communication and
-              Aerospace Technology (ICECA), Coimbatore, India,
-              2021, pp. 369-376, doi: 10.1109/ICECA52323.2021.9676008.
-            </PublicationItem>
-          </ul>
-        </div>
+        <SectionHeaderToggle
+          title="Publications"
+          isOpen={openSections[sectionKeys.publications]}
+          onToggle={() => toggleSection(sectionKeys.publications)}
+        />
+        {openSections[sectionKeys.publications] ? (
+          <div className="work_description">
+            <ul>
+              <PublicationItem href="https://ieeexplore.ieee.org/document/9716541">
+                <b>
+                  Detecting Credit Card Frauds Using Isolation Forest And Local
+                  Outlier Factor - Analytical Insights
+                </b>
+                ,
+                2022 4th International Conference on Smart Systems
+                and Inventive Technology (ICSSIT), Tirunelveli, India,
+                2022, pp. 1588-1594, doi: 10.1109/ICSSIT53264.2022.9716541.
+              </PublicationItem>
+              <PublicationItem href="https://ieeexplore.ieee.org/document/9676008">
+                <b>A Ratiocinative Concept of Algorithmic Trading using MACD Indicator</b>
+                ,
+                2021 5th International Conference on Electronics, Communication and
+                Aerospace Technology (ICECA), Coimbatore, India,
+                2021, pp. 369-376, doi: 10.1109/ICECA52323.2021.9676008.
+              </PublicationItem>
+            </ul>
+          </div>
+        ) : null}
       </div>
       </Container>
     </>
