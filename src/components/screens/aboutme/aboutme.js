@@ -130,6 +130,33 @@ const AboutMe = () => {
     publications: 'publications',
   }), []);
 
+  const skillCategories = useMemo(() => ([
+    {
+      title: 'Languages',
+      items: ['Java', 'C#', 'Python', 'C++', 'TypeScript', 'JavaScript', 'GoLang'],
+    },
+    {
+      title: 'Technologies',
+      items: ['React', 'Node', '.Net core', 'SpringBoot', 'Django', 'Flask'],
+    },
+    {
+      title: 'Database',
+      items: ['PostgreSQL', 'MongoDB', 'MS SQL Server', 'MySQL', 'Azure Tables/CosmosDB'],
+    },
+    {
+      title: 'Event Driven Architecture - AMQT',
+      items: ['Microservice', 'RabitMQ', 'SignalR', 'Azure Bus Service', 'Mass Transit'],
+    },
+    {
+      title: 'Cloud/DevOps',
+      items: ['Nginx', 'Azure', 'AWS', 'Docker', 'Kubernetes', 'Terraform'],
+    },
+    {
+      title: 'Observality',
+      items: ['Dynatrace', 'Azure Appinsights', 'ELK', 'AWS CloudWatch', 'Splunk'],
+    },
+  ]), []);
+
   const [openSections, setOpenSections] = useState({
     [sectionKeys.work]: true,
     [sectionKeys.education]: true,
@@ -385,70 +412,13 @@ const AboutMe = () => {
           />
           {openSections[sectionKeys.skills] ? (
             <>
-              <SkillCategory
-                title="Languages"
-                items={[
-                  'Java',
-                  'C#',
-                  'Python',
-                  'C++',
-                  'TypeScript',
-                  'JavaScript',
-                  'GoLang',
-                ]}
-              />
-              <SkillCategory
-                title="Technologies"
-                items={[
-                  'React',
-                  'Node',
-                  '.Net core',
-                  'SpringBoot',
-                  'Django',
-                  'Flask',
-                ]}
-              />
-              <SkillCategory
-                title="Database"
-                items={[
-                  'PostgreSQL',
-                  'MongoDB',
-                  'MS SQL Server',
-                  'MySQL',
-                  'Azure Tables/CosmosDB',
-                ]}
-              />
-              <SkillCategory
-                title="Event Driven Architecture - AMQT"
-                items={[
-                  'Microservice',
-                  'RabitMQ',
-                  'SignalR',
-                  'Azure Bus Service',
-                  'Mass Transit',
-                ]}
-              />
-              <SkillCategory
-                title="Cloud/DevOps"
-                items={[
-                  'Nginx',
-                  'Azure',
-                  'AWS',
-                  'Docker',
-                  'Kubernetes',
-                  'Terraform',
-                ]}
-              />
-              <SkillCategory
-                title="Observality"
-                items={[
-                  'Dynatrace',
-                  'Azure Appinsights',
-                  'ELK',
-                  'AWS CloudWatch',
-                  'Splunk',
-                ]}
-              />
+              {skillCategories.map((category) => (
+                <SkillCategory
+                  key={category.title}
+                  title={category.title}
+                  items={category.items}
+                />
+              ))}
             </>
           ) : null}
         </div>
