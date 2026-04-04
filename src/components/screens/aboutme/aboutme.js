@@ -345,24 +345,26 @@ const AboutMe = () => {
                 date="September 2023 - July 2025"
               >
                 <div className="work_description">
-                  <ul>
-                    <li>
-                      Designed a <b>Microservice architecture</b> and implemented <b>3</b> distinct services,
-                      leading to improvement in system uptime.
-                    </li>
-                    <li>
-                      Developed <b>RESTful APIs</b> using .NET Core, ensuring data integrity and security,
-                      with <b>zero data breaches</b> during my tenure.
-                    </li>
-                    <li>
-                      Applied <b>Dependency Injection pattern</b> in projects, improving code modularity and
-                      accelerating development to 1.3x.
-                    </li>
-                    <li>
-                      Enhanced <b>Genetec`s</b> cloud service deployments with automation techniques and scripts
-                      in powershell.
-                    </li>
-                  </ul>
+                  <RichBulletList
+                    items={[
+                      <>
+                        Designed a <b>Microservice architecture</b> and implemented <b>3</b> distinct services,
+                        leading to improvement in system uptime.
+                      </>,
+                      <>
+                        Developed <b>RESTful APIs</b> using .NET Core, ensuring data integrity and security,
+                        with <b>zero data breaches</b> during my tenure.
+                      </>,
+                      <>
+                        Applied <b>Dependency Injection pattern</b> in projects, improving code modularity and
+                        accelerating development to 1.3x.
+                      </>,
+                      <>
+                        Enhanced <b>Genetec`s</b> cloud service deployments with automation techniques and scripts
+                        in powershell.
+                      </>,
+                    ]}
+                  />
                 </div>
               </TimelineItem>
               <TimelineItem
