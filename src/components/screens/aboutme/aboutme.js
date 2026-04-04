@@ -374,14 +374,16 @@ const AboutMe = () => {
                 date="Jan 2022 - December 2022"
               >
                 <div className="work_description">
-                  <ul>
-                    <li><b>Led the backend team</b> in the making backend more Scalable, Secure, and Reliable in <b>Node.js</b>.</li>
-                    <li>Programmed a cron job to synchronously fetch data from Google Cloud API, reducing manual data entry by <b>70%.</b></li>
-                    <li>Connected 2 interaction panels, user web panel (Next.JS) with admin panel (React) in nginx.</li>
-                    <li>Implemented <b>user segmentation</b> for targeting specific users, resulting 25% surge in engagement.</li>
-                    <li>Handled recurring payments and one-time charges by implementing <b>The Stripe Payment Gateway service system</b>.</li>
-                    <li>Prepared React components in <b>MVC micro architecture</b> using patterns such as <b>singleton, factory</b>.</li>
-                  </ul>
+                  <RichBulletList
+                    items={[
+                      <><b>Led the backend team</b> in the making backend more scalable, secure, and reliable in <b>Node.js</b>.</>,
+                      <>Programmed a cron job to synchronously fetch data from Google Cloud API, reducing manual data entry by <b>70%</b>.</>,
+                      <>Connected 2 interaction panels, user web panel (Next.JS) with admin panel (React) in nginx.</>,
+                      <>Implemented <b>user segmentation</b> for targeting specific users, resulting 25% surge in engagement.</>,
+                      <>Handled recurring payments and one-time charges by implementing <b>The Stripe Payment Gateway service system</b>.</>,
+                      <>Prepared React components in <b>MVC micro architecture</b> using patterns such as <b>singleton, factory</b>.</>,
+                    ]}
+                  />
                 </div>
               </TimelineItem>
               <TimelineItem
