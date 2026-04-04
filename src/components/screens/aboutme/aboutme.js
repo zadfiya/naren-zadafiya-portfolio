@@ -418,18 +418,20 @@ const AboutMe = () => {
                 date="May 2020 - August 2020"
               >
                 <div className="work_description">
-                  <ul>
-                    <li>
-                      Built an elegant UI by utilizing android widgets with webview in order to load webpage for
-                      <b> The Ranch Simulator Game</b>.
-                    </li>
-                    <li>
-                      <b>Parsed JSON</b> data and handled API data loading, used <b>Firestore</b> for storing realtime data.
-                    </li>
-                    <li>
-                      Contributed to the deployment process, including app submission to Google Play, ensuring successful releases.
-                    </li>
-                  </ul>
+                  <RichBulletList
+                    items={[
+                      <>
+                        Built an elegant UI by utilizing android widgets with webview in order to load webpage for
+                        <b> The Ranch Simulator Game</b>.
+                      </>,
+                      <>
+                        <b>Parsed JSON</b> data and handled API data loading, used <b>Firestore</b> for storing realtime data.
+                      </>,
+                      <>
+                        Contributed to the deployment process, including app submission to Google Play, ensuring successful releases.
+                      </>,
+                    ]}
+                  />
                 </div>
               </TimelineItem>
             </>
