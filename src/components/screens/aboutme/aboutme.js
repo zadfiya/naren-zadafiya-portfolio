@@ -393,20 +393,22 @@ const AboutMe = () => {
                 date="June 2021 - August 2021"
               >
                 <div className="work_description">
-                  <ul>
-                    <li>
-                      Experienced in working with Redux architecture using complex <b>Object-Oriented concepts</b>
-                      in improving the performance of websites to 1.5 sec.
-                    </li>
-                    <li>
-                      Improved initial loading time of the web page of the existing site from <b>7 sec to under 3 sec</b>
-                      by caching data on UI, reducing server call and stopping re-rendering of components.
-                    </li>
-                    <li>
-                      Integrated the application with third-party services and external APIs, utilized
-                      <b> TanStack queries</b> as part of the implementation.
-                    </li>
-                  </ul>
+                  <RichBulletList
+                    items={[
+                      <>
+                        Experienced in working with Redux architecture using complex <b>Object-Oriented concepts</b>
+                        in improving the performance of websites to 1.5 sec.
+                      </>,
+                      <>
+                        Improved initial loading time of the web page of the existing site from <b>7 sec to under 3 sec</b>
+                        by caching data on UI, reducing server call and stopping re-rendering of components.
+                      </>,
+                      <>
+                        Integrated the application with third-party services and external APIs, utilized
+                        <b> TanStack queries</b> as part of the implementation.
+                      </>,
+                    ]}
+                  />
                 </div>
               </TimelineItem>
               <TimelineItem
