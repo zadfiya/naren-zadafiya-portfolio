@@ -223,7 +223,7 @@ const AboutMe = () => {
   return (
     <>
       <Container>
-      <Text tag="h1" variant="titleXS">About Me</Text>
+      <SectionTitle>About Me</SectionTitle>
       <Box
         display="flex"
         flexDirection={{
