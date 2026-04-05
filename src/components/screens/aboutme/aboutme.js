@@ -119,10 +119,16 @@ PublicationItem.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-const SectionHeaderToggle = ({ title, isOpen, onToggle }) => (
+const SectionHeaderToggle = ({ title, sectionId, isOpen, onToggle }) => (
   <div className="section_header" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
     <SectionTitle>{title}</SectionTitle>
-    <button type="button" className="section_toggle" onClick={onToggle}>
+    <button
+      type="button"
+      className="section_toggle"
+      onClick={onToggle}
+      aria-expanded={isOpen}
+      aria-controls={sectionId}
+    >
       {isOpen ? 'Hide' : 'Show'}
     </button>
   </div>
@@ -130,6 +136,7 @@ const SectionHeaderToggle = ({ title, isOpen, onToggle }) => (
 
 SectionHeaderToggle.propTypes = {
   title: PropTypes.string.isRequired,
+  sectionId: PropTypes.string.isRequired,
   isOpen: PropTypes.bool.isRequired,
   onToggle: PropTypes.func.isRequired,
 };
@@ -308,11 +315,12 @@ const AboutMe = () => {
         <div className="left-column">
           <SectionHeaderToggle
             title="Work Experience"
+            sectionId="section-work-experience"
             isOpen={openSections[sectionKeys.work]}
             onToggle={() => toggleSection(sectionKeys.work)}
           />
           {openSections[sectionKeys.work] ? (
-            <>
+            <div id="section-work-experience">
               <TimelineItem
                 title="Senior Full Stack Engineer"
                 organization="Royal Bank of Canada, Montreal, QC"
@@ -434,17 +442,18 @@ const AboutMe = () => {
                   />
                 </div>
               </TimelineItem>
-            </>
+            </div>
           ) : null}
         </div>
         <div className="right-column">
           <SectionHeaderToggle
             title="Education"
+            sectionId="section-education"
             isOpen={openSections[sectionKeys.education]}
             onToggle={() => toggleSection(sectionKeys.education)}
           />
           {openSections[sectionKeys.education] ? (
-            <>
+            <div id="section-education">
               <TimelineItem
                 title="Masters Of Applied Computer Science"
                 organization="Concordia University, Montreal, Canada"
@@ -457,15 +466,16 @@ const AboutMe = () => {
                 orgUrl="https://www.charusat.ac.in/"
                 date="July 2018 - April 2022"
               />
-            </>
+            </div>
           ) : null}
           <SectionHeaderToggle
             title="Skills"
+            sectionId="section-skills"
             isOpen={openSections[sectionKeys.skills]}
             onToggle={() => toggleSection(sectionKeys.skills)}
           />
           {openSections[sectionKeys.skills] ? (
-            <>
+            <div id="section-skills">
               {skillCategories.map((category) => (
                 <SkillCategory
                   key={category.title}
@@ -473,18 +483,19 @@ const AboutMe = () => {
                   items={category.items}
                 />
               ))}
-            </>
+            </div>
           ) : null}
         </div>
       </div>
       <div>
         <SectionHeaderToggle
           title="Publications"
+          sectionId="section-publications"
           isOpen={openSections[sectionKeys.publications]}
           onToggle={() => toggleSection(sectionKeys.publications)}
         />
         {openSections[sectionKeys.publications] ? (
-          <div className="work_description">
+          <div className="work_description" id="section-publications">
             <ul>
               {publicationEntries.map((entry) => (
                 <PublicationItem key={entry.href} href={entry.href}>
