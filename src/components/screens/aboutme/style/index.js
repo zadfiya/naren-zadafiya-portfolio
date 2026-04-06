@@ -78,6 +78,43 @@ const Container = styled.section`
   margin: 20px 0px;
 }
 
+.section_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.section_toggle {
+  border: 1.5px solid #000000;
+  border-radius: 999px;
+  background: transparent;
+  color: #000000;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.8rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.section_toggle:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.section_toggle:active {
+  transform: translateY(1px);
+}
+
+.section_toggle:focus-visible {
+  outline: 2px dashed #000000;
+  outline-offset: 2px;
+}
+
 .section_content {
   border-left: 2px solid black;
   padding-bottom: 0.4rem;

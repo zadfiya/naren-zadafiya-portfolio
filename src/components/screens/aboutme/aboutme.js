@@ -104,13 +104,11 @@ SkillCategory.propTypes = {
 };
 
 const PublicationItem = ({ href, children }) => (
-  <li>
-    {/* <a href={href} target="_blank" rel="noreferrer" className="external_link"> */}
+  <li> 
       <Text tag="p" variant="paragraph1" href={href} target="_blank" >
         {children}
         <ExternalIcon />
       </Text>
-    {/* </a> */}
   </li>
 );
 
@@ -120,7 +118,7 @@ PublicationItem.propTypes = {
 };
 
 const SectionHeaderToggle = ({ title, sectionId, isOpen, onToggle }) => (
-  <div className="section_header" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+  <div className="section_header">
     <SectionTitle>{title}</SectionTitle>
     <button
       type="button"
