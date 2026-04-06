@@ -105,12 +105,12 @@ SkillCategory.propTypes = {
 
 const PublicationItem = ({ href, children }) => (
   <li>
-    <a href={href} target="_blank" rel="noreferrer" className="external_link">
-      <Text tag="p" variant="paragraph1">
+    {/* <a href={href} target="_blank" rel="noreferrer" className="external_link"> */}
+      <Text tag="p" variant="paragraph1" href={href} target="_blank" >
         {children}
         <ExternalIcon />
       </Text>
-    </a>
+    {/* </a> */}
   </li>
 );
 
