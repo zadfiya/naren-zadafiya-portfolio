@@ -86,6 +86,9 @@ const Container = styled.section`
 }
 
 .section_toggle {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   border: 1.5px solid #000000;
   border-radius: 999px;
   background: transparent;
@@ -98,12 +101,25 @@ const Container = styled.section`
   padding: 0.35rem 0.8rem;
   line-height: 1;
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.section_toggle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000000;
+  transform: translateX(-102%);
+  transition: transform 0.22s ease;
+  z-index: -1;
 }
 
 .section_toggle:hover {
-  background: #000000;
   color: #ffffff;
+}
+
+.section_toggle:hover::before {
+  transform: translateX(0);
 }
 
 .section_toggle:active {
