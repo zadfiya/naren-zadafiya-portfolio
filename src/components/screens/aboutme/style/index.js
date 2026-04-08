@@ -82,6 +82,7 @@ const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 12px;
 }
 
@@ -130,6 +131,19 @@ const Container = styled.section`
   outline: 2px dashed #000000;
   outline-offset: 2px;
 }
+
+${breakpointsMedia({
+  md: css`
+    .section_header {
+      flex-wrap: nowrap;
+    }
+
+    .section_toggle {
+      padding: 0.4rem 1rem;
+      font-size: 0.8rem;
+    }
+  `,
+})}
 
 .section_content {
   border-left: 2px solid black;
