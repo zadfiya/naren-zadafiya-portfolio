@@ -63,7 +63,9 @@ RichBulletList.propTypes = {
   items: PropTypes.arrayOf(PropTypes.node).isRequired,
 };
 
-const TimelineItem = ({ title, organization, orgUrl, date, children }) => (
+const TimelineItem = ({
+  title, organization, orgUrl, date, children, 
+}) => (
   <div className="section_content">
     <Text tag="h3" variant="subTitle">{title}</Text>
     <div>
