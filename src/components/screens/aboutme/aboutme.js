@@ -119,7 +119,9 @@ PublicationItem.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-const SectionHeaderToggle = ({ title, sectionId, isOpen, onToggle }) => (
+const SectionHeaderToggle = ({
+  title, sectionId, isOpen, onToggle, 
+}) => (
   <div className="section_header">
     <SectionTitle>{title}</SectionTitle>
     <button
