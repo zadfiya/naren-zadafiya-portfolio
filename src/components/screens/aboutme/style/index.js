@@ -133,7 +133,7 @@ const Container = styled.section`
 }
 
 ${breakpointsMedia({
-  md: css`
+    md: css`
     .section_header {
       flex-wrap: nowrap;
     }
@@ -143,7 +143,7 @@ ${breakpointsMedia({
       font-size: 0.8rem;
     }
   `,
-})}
+  })}
 
 .section_content {
   border-left: 2px solid black;
