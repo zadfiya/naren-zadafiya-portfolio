@@ -107,7 +107,7 @@ SkillCategory.propTypes = {
 
 const PublicationItem = ({ href, children }) => (
   <li> 
-      <Text tag="p" variant="paragraph1" href={href} target="_blank" >
+      <Text tag="p" variant="paragraph1" href={href} target="_blank">
         {children}
         <ExternalIcon />
       </Text>
