@@ -48,7 +48,7 @@ const AboutMe = () => (
             </Text>
           </Description>
           <Description>
-            <Link href="https://drive.google.com/file/d/1ZEOs3z8H-UA3xiLQIqN6FvYqfweofsMV/view?usp=sharing" target="_blank" className="resume">
+            <Link href="https://drive.google.com/file/d/1piyGBMQe4ZnPG1PfimzguhzSX2BgQgGc/view?usp=sharing" target="_blank" className="resume">
               <Text tag="span" variant="paragraph2" color="fonts.main">
                 Resume
                 <span className="svgicon">
@@ -102,7 +102,7 @@ const AboutMe = () => (
             <Text tag="h3" variant="subTitle">Senior Full Stack Engineer</Text>
             <div>
              Royal Bank of Canada, Montreal, QC
-              <a href="https://rentechdigital.com/" className="external_link">
+              <a href="https://www.linkedin.com/company/rbc/" className="external_link">
                 <svg
                   stroke="#fff"
                   fill="none"
@@ -122,14 +122,15 @@ const AboutMe = () => (
             <div className="work_description">
               <ul>
                 <li>
-                  Prepared different ASP.net component in
-                  <b> MVC micro architecture</b>
-                  {' '}
-                  framework which internally use various design patterns (2+)
-                  such as
-                  <b> singleton, factory</b>
-                  .
-                </li>
+                  Build a conversational <b>AI</b> agent using <b> retrieval-augmented generation (RAG) </b> that can access bank policies, check basic account
+balances, and answer common FAQs securely.</li>
+  <li>
+    Integrated <b>TMX </b> with <b>ML</b>  based anomaly detection to assess risk scores, reducing false authentication challenges by <b>15%</b>.
+  </li>
+                  <li>
+                  Enhanced credit,debit card security by implementing encryption, safeguarding sensitive data for <b>100K+</b> daily transactions.
+                  </li>
+                
               </ul>
             </div>
           </div>
@@ -368,7 +369,7 @@ const AboutMe = () => (
                 </svg>
               </a>
             </div>
-            <div className="date">September 2022 - Present</div>
+            <div className="date">September 2022 - August 2024</div>
             <Text tag="h3" variant="subTitle">B.Tech Computer Engineering</Text>
             <div>
               Chorotar University of Science & Technology, Anand, India
@@ -454,6 +455,19 @@ const AboutMe = () => (
                 <li>Terraform</li>
               </ul>
             </div>
+          </div>
+          <div className="section_content">
+            <Text tag="h3" variant="subTitle">Observality</Text>
+            <div>
+              <ul>
+                <li>Dynatrace</li>
+                <li>Azure Appinsights</li>
+                <li>ELK</li>
+                <li>AWS CloudWatch</li>
+                <li>Splunk</li>
+              </ul>
+            </div>
+            
           </div>
         </div>
       </div>
