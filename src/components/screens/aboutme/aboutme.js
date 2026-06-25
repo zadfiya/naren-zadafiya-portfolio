@@ -1,13 +1,231 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
+import PropTypes from 'prop-types';
 import Box from '../../foundation/box';
 import Text from '../../foundation/text';
 import Link from '../../common/link/link';
 import Container, { Description, Image, Info } from './style';
 
-const AboutMe = () => (
-  <>
-    <Container>
-      <Text tag="h1" variant="titleXS">About Me</Text>
+const ExternalIcon = () => (
+  <svg
+    stroke="#fff"
+    fill="none"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    height="1em"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+    <polyline points="15 3 21 3 21 9" />
+    <line x1="10" y1="14" x2="21" y2="3" />
+  </svg>
+);
+
+const ExternalCompanyLink = ({ href }) => (
+  <a href={href} className="external_link">
+    <ExternalIcon />
+  </a>
+);
+
+ExternalCompanyLink.propTypes = {
+  href: PropTypes.string.isRequired,
+};
+
+const SectionTitle = ({ children }) => (
+  <Text tag="h1" variant="title" className="title">{children}</Text>
+);
+
+SectionTitle.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+const BulletList = ({ items }) => (
+  <ul>
+    {items.map((item) => (
+      <li key={item}>{item}</li>
+    ))}
+  </ul>
+);
+
+BulletList.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
+const RichBulletList = ({ items }) => (
+  <ul>
+    {items.map((item, index) => (
+      <li key={`rich-item-${index + 1}`}>{item}</li>
+    ))}
+  </ul>
+);
+
+RichBulletList.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.node).isRequired,
+};
+
+const TimelineItem = ({
+  title, organization, orgUrl, date, children, 
+}) => (
+  <div className="section_content">
+    <Text tag="h3" variant="subTitle">{title}</Text>
+    <div>
+      {organization}
+      {orgUrl ? <ExternalCompanyLink href={orgUrl} /> : null}
+    </div>
+    {date ? <div className="date">{date}</div> : null}
+    {children}
+  </div>
+);
+
+TimelineItem.defaultProps = {
+  orgUrl: '',
+  date: '',
+  children: null,
+};
+
+TimelineItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  organization: PropTypes.string.isRequired,
+  orgUrl: PropTypes.string,
+  date: PropTypes.string,
+  children: PropTypes.node,
+};
+
+const SkillCategory = ({ title, items }) => (
+  <div className="section_content">
+    <Text tag="h3" variant="subTitle">{title}</Text>
+    <div>
+      <BulletList items={items} />
+    </div>
+  </div>
+);
+
+SkillCategory.propTypes = {
+  title: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
+const PublicationItem = ({ href, children }) => (
+  <li> 
+      <Text tag="p" variant="paragraph1" href={href} target="_blank">
+        {children}
+        <ExternalIcon />
+      </Text>
+  </li>
+);
+
+PublicationItem.propTypes = {
+  href: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};
+
+const SectionHeaderToggle = ({
+  title, sectionId, isOpen, onToggle, 
+}) => (
+  <div className="section_header">
+    <SectionTitle>{title}</SectionTitle>
+    <button
+      type="button"
+      className="section_toggle"
+      onClick={onToggle}
+      aria-expanded={isOpen}
+      aria-controls={sectionId}
+    >
+      {isOpen ? 'Hide' : 'Show'}
+    </button>
+  </div>
+);
+
+SectionHeaderToggle.propTypes = {
+  title: PropTypes.string.isRequired,
+  sectionId: PropTypes.string.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  onToggle: PropTypes.func.isRequired,
+};
+
+const AboutMe = () => {
+  const sectionKeys = useMemo(() => ({
+    work: 'work',
+    education: 'education',
+    skills: 'skills',
+    publications: 'publications',
+  }), []);
+
+  const skillCategories = useMemo(() => ([
+    {
+      title: 'Languages',
+      items: ['Java', 'C#', 'Python', 'C++', 'TypeScript', 'JavaScript', 'GoLang'],
+    },
+    {
+      title: 'Technologies',
+      items: ['React', 'Node', '.Net core', 'SpringBoot', 'Django', 'Flask'],
+    },
+    {
+      title: 'Database',
+      items: ['PostgreSQL', 'MongoDB', 'MS SQL Server', 'MySQL', 'Azure Tables/CosmosDB'],
+    },
+    {
+      title: 'Event Driven Architecture - AMQT',
+      items: ['Microservice', 'RabitMQ', 'SignalR', 'Azure Bus Service', 'Mass Transit'],
+    },
+    {
+      title: 'Cloud/DevOps',
+      items: ['Nginx', 'Azure', 'AWS', 'Docker', 'Kubernetes', 'Terraform'],
+    },
+    {
+      title: 'Observality',
+      items: ['Dynatrace', 'Azure Appinsights', 'ELK', 'AWS CloudWatch', 'Splunk'],
+    },
+  ]), []);
+
+  const publicationEntries = useMemo(() => ([
+    {
+      href: 'https://ieeexplore.ieee.org/document/9716541',
+      content: (
+        <>
+          <b>
+            Detecting Credit Card Frauds Using Isolation Forest And Local
+            Outlier Factor - Analytical Insights
+          </b>
+          ,
+          2022 4th International Conference on Smart Systems
+          and Inventive Technology (ICSSIT), Tirunelveli, India,
+          2022, pp. 1588-1594, doi: 10.1109/ICSSIT53264.2022.9716541.
+        </>
+      ),
+    },
+    {
+      href: 'https://ieeexplore.ieee.org/document/9676008',
+      content: (
+        <>
+          <b>A Ratiocinative Concept of Algorithmic Trading using MACD Indicator</b>
+          ,
+          2021 5th International Conference on Electronics, Communication and
+          Aerospace Technology (ICECA), Coimbatore, India,
+          2021, pp. 369-376, doi: 10.1109/ICECA52323.2021.9676008.
+        </>
+      ),
+    },
+  ]), []);
+
+  const [openSections, setOpenSections] = useState({
+    [sectionKeys.work]: true,
+    [sectionKeys.education]: true,
+    [sectionKeys.skills]: true,
+    [sectionKeys.publications]: true,
+  });
+
+  const toggleSection = (sectionKey) => {
+    setOpenSections((prev) => ({
+      ...prev,
+      [sectionKey]: !prev[sectionKey],
+    }));
+  };
+
+  return (
+    <>
+      <Container>
+      <SectionTitle>About Me</SectionTitle>
       <Box
         display="flex"
         flexDirection={{
@@ -48,7 +266,7 @@ const AboutMe = () => (
             </Text>
           </Description>
           <Description>
-            <Link href="https://drive.google.com/file/d/1ZEOs3z8H-UA3xiLQIqN6FvYqfweofsMV/view?usp=sharing" target="_blank" className="resume">
+            <Link href="https://drive.google.com/file/d/1piyGBMQe4ZnPG1PfimzguhzSX2BgQgGc/view?usp=sharing" target="_blank" className="resume">
               <Text tag="span" variant="paragraph2" color="fonts.main">
                 Resume
                 <span className="svgicon">
@@ -86,7 +304,7 @@ const AboutMe = () => (
             <path fillRule="evenodd" clipRule="evenodd" d="M125.181 6.38451C150.056 6.67557 173.388 16.3048 193.925 30.3246C214.974 44.6941 234.534 62.5617 242.772 86.6592C251.078 110.957 247.354 137.471 238.833 161.694C230.47 185.467 215.675 206.336 195.397 221.33C174.981 236.427 150.581 245.318 125.181 245.731C99.4805 246.15 74.2547 238.483 53.2817 223.643C32.1281 208.676 15.0229 187.76 8.02016 162.832C1.1829 138.493 7.12516 113.08 15.5231 89.2335C23.7393 65.9031 35.507 43.6232 55.2563 28.7021C75.2601 13.5887 100.099 6.09104 125.181 6.38451Z" stroke="black" />
           </svg>
 
-          <img src="https://media.licdn.com/dms/image/D4E03AQE3_Ii7IadzoA/profile-displayphoto-shrink_800_800/0/1695646628584?e=1725494400&v=beta&t=T38Xu0kpBUqNv0CTyh19aRpPHZJaAb0ItYJ-2SsUgFw" alt="" />
+          <img src="https://i.postimg.cc/kgbGYxMV/Naren-DP.png" alt="" />
           <Text tag="h5" variant="title">
             VolleyBall🏐 - Cricket🏏 - Badminton🏸 Enthusiast
           </Text>
@@ -97,387 +315,202 @@ const AboutMe = () => (
       </Box>
       <div className="container">
         <div className="left-column">
-          <Text tag="h1" variant="title" className="title">Work Experience</Text>
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Software Developer Intern- Cloud</Text>
-            {/* <div className="work_title">Software Developer - Cloud</div> */}
-            <div>
-              Genetec, Montreal, Canada
-              <a href="https://www.genetec.com/" className="external_link">
-                <svg
-                  stroke="#fff"
-                  fill="none"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
+          <SectionHeaderToggle
+            title="Work Experience"
+            sectionId="section-work-experience"
+            isOpen={openSections[sectionKeys.work]}
+            onToggle={() => toggleSection(sectionKeys.work)}
+          />
+          {openSections[sectionKeys.work] ? (
+            <div id="section-work-experience">
+              <TimelineItem
+                title="Senior Full Stack Engineer"
+                organization="Royal Bank of Canada, Montreal, QC"
+                orgUrl="https://www.linkedin.com/company/rbc/"
+                date="July 2025 - Present"
+              >
+                <div className="work_description">
+                  <RichBulletList
+                    items={[
+                      <>
+                        Build a conversational <b>AI</b> agent using <b> retrieval-augmented generation (RAG) </b>
+                        that can access bank policies, check basic account balances, and answer common FAQs securely.
+                      </>,
+                      <>
+                        Integrated <b>TMX </b> with <b>ML</b> based anomaly detection to assess risk scores,
+                        reducing false authentication challenges by <b>15%</b>.
+                      </>,
+                      <>
+                        Enhanced credit,debit card security by implementing encryption, safeguarding sensitive data for
+                        <b> 100K+</b> daily transactions.
+                      </>,
+                    ]}
+                  />
+                </div>
+              </TimelineItem>
+              <TimelineItem
+                title="Software Developer - Cloud Operation"
+                organization="Genetec, Montreal, Canada"
+                orgUrl="https://www.genetec.com/"
+                date="September 2023 - July 2025"
+              >
+                <div className="work_description">
+                  <RichBulletList
+                    items={[
+                      <>
+                        Designed a <b>Microservice architecture</b> and implemented <b>3</b> distinct services,
+                        leading to improvement in system uptime.
+                      </>,
+                      <>
+                        Developed <b>RESTful APIs</b> using .NET Core, ensuring data integrity and security,
+                        with <b>zero data breaches</b> during my tenure.
+                      </>,
+                      <>
+                        Applied <b>Dependency Injection pattern</b> in projects, improving code modularity and
+                        accelerating development to 1.3x.
+                      </>,
+                      <>
+                        Enhanced <b>Genetec`s</b> cloud service deployments with automation techniques and scripts
+                        in powershell.
+                      </>,
+                    ]}
+                  />
+                </div>
+              </TimelineItem>
+              <TimelineItem
+                title="Full Stack Developer"
+                organization="Renetech Digital, New York, USA"
+                orgUrl="https://rentechdigital.com/"
+                date="Jan 2022 - December 2022"
+              >
+                <div className="work_description">
+                  <RichBulletList
+                    items={[
+                      <><b>Led the backend team</b> in the making backend more scalable, secure, and reliable in <b>Node.js</b>.</>,
+                      <>Programmed a cron job to synchronously fetch data from Google Cloud API, reducing manual data entry by <b>70%</b>.</>,
+                      <>Connected 2 interaction panels, user web panel (Next.JS) with admin panel (React) in nginx.</>,
+                      <>Implemented <b>user segmentation</b> for targeting specific users, resulting 25% surge in engagement.</>,
+                      <>Handled recurring payments and one-time charges by implementing <b>The Stripe Payment Gateway service system</b>.</>,
+                      <>Prepared React components in <b>MVC micro architecture</b> using patterns such as <b>singleton, factory</b>.</>,
+                    ]}
+                  />
+                </div>
+              </TimelineItem>
+              <TimelineItem
+                title="Software Developer Intern"
+                organization="Rentech Digital, New York, USA"
+                orgUrl="https://rentechdigital.com/"
+                date="June 2021 - August 2021"
+              >
+                <div className="work_description">
+                  <RichBulletList
+                    items={[
+                      <>
+                        Experienced in working with Redux architecture using complex <b>Object-Oriented concepts</b>
+                        in improving the performance of websites to 1.5 sec.
+                      </>,
+                      <>
+                        Improved initial loading time of the web page of the existing site from <b>7 sec to under 3 sec</b>
+                        by caching data on UI, reducing server call and stopping re-rendering of components.
+                      </>,
+                      <>
+                        Integrated the application with third-party services and external APIs, utilized
+                        <b> TanStack queries</b> as part of the implementation.
+                      </>,
+                    ]}
+                  />
+                </div>
+              </TimelineItem>
+              <TimelineItem
+                title="Mobile Application Developer"
+                organization="Zibma Infotech, Surat, India"
+                orgUrl="https://www.linkedin.com/company/zibma/"
+                date="May 2020 - August 2020"
+              >
+                <div className="work_description">
+                  <RichBulletList
+                    items={[
+                      <>
+                        Built an elegant UI by utilizing android widgets with webview in order to load webpage for
+                        <b> The Ranch Simulator Game</b>.
+                      </>,
+                      <>
+                        <b>Parsed JSON</b> data and handled API data loading, used <b>Firestore</b> for storing realtime data.
+                      </>,
+                      <>
+                        Contributed to the deployment process, including app submission to Google Play, ensuring successful releases.
+                      </>,
+                    ]}
+                  />
+                </div>
+              </TimelineItem>
             </div>
-            <div className="date">September 2023 - Present</div>
-            <div className="work_description">
-              <ul>
-                <li>
-                  Designed a
-                  <b> Microservice architecture</b>
-                  {' '}
-                  and implemented
-                  <b> 3</b>
-                  {' '}
-                  distinct services, leading to improvement in system uptime.
-                </li>
-                <li>
-                  Developed
-                  <b> RESTful APIs</b>
-                  {' '}
-                  using .NET Core, ensuring data integrity and security, with
-                  <b> zero data breaches</b>
-                  {' '}
-                  during my tenure.
-                </li>
-                <li>
-                  Applied
-                  <b> Dependency Injection pattern</b>
-                  {' '}
-                  in projects, improving code modularity and accelerating development to 1.3x.
-                </li>
-                <li>
-                  Enhanced
-                  <b> Genetec`s</b>
-                  {' '}
-                  cloud service deployments with automation techniques and scripts in powershell.
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Full Stack Developer</Text>
-            <div>
-              Renetech Digital, New York, USA
-              <a href="https://rentechdigital.com/" className="external_link">
-                <svg
-                  stroke="#fff"
-                  fill="none"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-            </div>
-            <div className="date">Jan 2022 - Augus 2022</div>
-            <div className="work_description">
-              <ul>
-                <li>
-                  <b>Led the backend team</b>
-                  {' '}
-                  in the making backend more Scalable, Secure, and Reliable in
-                  {' '}
-                  <b> Node.js</b>
-                  .
-                </li>
-                <li>
-                  Programmed a cron job to Synchronously fetched data from Google Cloud API,
-                  reducing manual data entry by
-                  <b> 70%.</b>
-                </li>
-                <li>
-                  Connected 2 interaction panels, user web panel (Next.JS) with admin panel
-                  (React) in the nginx.
-                </li>
-                <li>
-                  Implemented a functionality of
-                  <b> user segmentation</b>
-                  {' '}
-                  for targeting specific users, resulting 25% surge in engagement.
-                </li>
-                <li>
-                  Handled recurring payments & 1-time charges by implementing
-                  <b> The Stripe Payment Gateway service system</b>
-                  .
-                </li>
-                <li>
-                  Prepared different React component in
-                  <b> MVC micro architecture</b>
-                  {' '}
-                  framework which internally use various design patterns (2+)
-                  such as
-                  <b> singleton, factory</b>
-                  .
-                </li>
-              </ul>
-            </div>
-          </div>
-          {/* <Text tag="h1" variant="title" className="title">Internship Experience</Text> */}
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Software Developer Intern</Text>
-            <div>
-              Rentech Digital, New York, USA
-              <a href="https://rentechdigital.com/" className="external_link">
-                <svg
-                  stroke="#fff"
-                  fill="none"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-            </div>
-            <div className="date"> June 2021 - August 2021</div>
-            <div className="work_description">
-              <ul>
-                <li>
-                  Experienced in working with Redux architecture using complex
-                  <b> Object-Oriented concepts</b>
-                  {' '}
-                  in improving the performance of the
-                  websites to 1.5 sec.
-                </li>
-                <li>
-                  Improved initial loading time of the web page of the existing site from
-                  <b> 7 Sec to under 3 Sec</b>
-                  {' '}
-                  by caching data on UI, reducing
-                  server call and stopping re-rendering of components.
-                </li>
-                <li>
-                  Integrated the application with third-party services and external APIs, Utilized
-                  <b> TanStack queries</b>
-                  , as part of the implementation.
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Mobile Application Developer</Text>
-            <div>
-              Zibma Infotech, Surat, India
-              <a href="https://www.linkedin.com/company/zibma/" className="external_link">
-                <svg
-                  stroke="#fff"
-                  fill="none"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-            </div>
-            <div className="date"> May 2020 - August 2020</div>
-            <div className="work_description">
-              <ul>
-                <li>
-                  Build an elegant UI by utilizing various android widgets with
-                  webview in order to load webpage for
-                  <b> The Ranch Simulator Game</b>
-                  .
-                </li>
-                <li>
-                  <b>Parsed JSON</b>
-                  {' '}
-                  data and handle API for data loading, used
-                  {' '}
-                  <b> Firestore</b>
-                  {' '}
-                  for storing realtime data.
-                </li>
-                <li>
-                  Contributed to the deployment process, including app
-                  submission to app stores (Google Play)
-                  , ensuring successful releases.
-                </li>
-              </ul>
-            </div>
-          </div>
+          ) : null}
         </div>
         <div className="right-column">
-          <Text tag="h1" variant="title" className="title">Education</Text>
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Masters Of Applied Computer Science</Text>
-            <div>
-              Concordia University, Montreal, Canada
-              <a href="https://www.concordia.ca/" className="external_link">
-                <svg
-                  stroke="#fff"
-                  fill="none"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
+          <SectionHeaderToggle
+            title="Education"
+            sectionId="section-education"
+            isOpen={openSections[sectionKeys.education]}
+            onToggle={() => toggleSection(sectionKeys.education)}
+          />
+          {openSections[sectionKeys.education] ? (
+            <div id="section-education">
+              <TimelineItem
+                title="Masters Of Applied Computer Science"
+                organization="Concordia University, Montreal, Canada"
+                orgUrl="https://www.concordia.ca/"
+                date="September 2022 - August 2024"
+              />
+              <TimelineItem
+                title="B.Tech Computer Engineering"
+                organization="Chorotar University of Science & Technology, Anand, India"
+                orgUrl="https://www.charusat.ac.in/"
+                date="July 2018 - April 2022"
+              />
             </div>
-            <div className="date">September 2022 - Present</div>
-            <Text tag="h3" variant="subTitle">B.Tech Computer Engineering</Text>
-            <div>
-              Chorotar University of Science & Technology, Anand, India
-              <a href="https://www.charusat.ac.in/" className="external_link">
-                <svg
-                  stroke="#fff"
-                  fill="none"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
+          ) : null}
+          <SectionHeaderToggle
+            title="Skills"
+            sectionId="section-skills"
+            isOpen={openSections[sectionKeys.skills]}
+            onToggle={() => toggleSection(sectionKeys.skills)}
+          />
+          {openSections[sectionKeys.skills] ? (
+            <div id="section-skills">
+              {skillCategories.map((category) => (
+                <SkillCategory
+                  key={category.title}
+                  title={category.title}
+                  items={category.items}
+                />
+              ))}
             </div>
-            <div className="date">July 2018 - April 2022</div>
-          </div>
-          <Text tag="h1" variant="title" className="title">Skills</Text>
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Languages</Text>
-            <div>
-              <ul>
-                <li>Java</li>
-                <li>C#</li>
-                <li>Python</li>
-                <li>C++</li>
-                <li>TypeScript</li>
-                <li>JavaScript</li>
-                <li>GoLang</li>
-              </ul>
-            </div>
-          </div>
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Technologies</Text>
-            <div>
-              <ul>
-                <li>React</li>
-                <li>Node</li>
-                <li>.Net core</li>
-                <li>SpringBoot</li>
-                <li>Django</li>
-                <li>Flask</li>
-              </ul>
-            </div>
-          </div>
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Database</Text>
-            <div>
-              <ul>
-                <li>PostgreSQL</li>
-                <li>MongoDB</li>
-                <li>MS SQL Server</li>
-                <li>MySQL</li>
-                <li>Azure Tables/CosmosDB</li>
-              </ul>
-            </div>
-          </div>
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Event Driven Architecture - AMQT</Text>
-            <div>
-              <ul>
-                <li>Microservice</li>
-                <li>RabitMQ</li>
-                <li>SignalR</li>
-                <li>Azure Bus Service</li>
-                <li>Mass Transit</li>
-              </ul>
-            </div>
-          </div>
-          <div className="section_content">
-            <Text tag="h3" variant="subTitle">Cloud/DevOps</Text>
-            <div>
-              <ul>
-                <li>Nginx</li>
-                <li>Azure</li>
-                <li>AWS</li>
-                <li>Docker</li>
-                <li>Kubernetes</li>
-                <li>Terraform</li>
-              </ul>
-            </div>
-          </div>
+          ) : null}
         </div>
       </div>
       <div>
-        <Text tag="h1" variant="title">Publications</Text>
-        <div className="work_description">
-          <ul>
-            <li>
-              <Text tag="p" variant="paragraph1" href="https://ieeexplore.ieee.org/document/9716541" target="_blank">
-                <b>
-                  Detecting Credit Card Frauds Using Isolation Forest And Local
-                  Outlier Factor - Analytical Insights
-                </b>
-                ,
-                2022 4th International Conference on Smart Systems
-                and Inventive Technology (ICSSIT), Tirunelveli, India,
-                2022, pp. 1588-1594, doi: 10.1109/ICSSIT53264.2022.9716541.
-                <svg
-                  stroke="#fff"
-                  fill="none"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </Text>
-            </li>
-            <li>
-              <Text tag="p" variant="paragraph1" href="https://ieeexplore.ieee.org/document/9676008" target="_blank">
-                <b>A Ratiocinative Concept of Algorithmic Trading using MACD Indicator</b>
-                ,
-                2021 5th International Conference on Electronics, Communication and
-                Aerospace Technology (ICECA), Coimbatore, India,
-                2021, pp. 369-376, doi: 10.1109/ICECA52323.2021.9676008.
-                <svg
-                  stroke="#fff"
-                  fill="none"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </Text>
-            </li>
-          </ul>
-        </div>
+        <SectionHeaderToggle
+          title="Publications"
+          sectionId="section-publications"
+          isOpen={openSections[sectionKeys.publications]}
+          onToggle={() => toggleSection(sectionKeys.publications)}
+        />
+        {openSections[sectionKeys.publications] ? (
+          <div className="work_description" id="section-publications">
+            <ul>
+              {publicationEntries.map((entry) => (
+                <PublicationItem key={entry.href} href={entry.href}>
+                  {entry.content}
+                </PublicationItem>
+              ))}
+            </ul>
+          </div>
+        ) : null}
       </div>
-    </Container>
-  </>
-);
+      </Container>
+    </>
+  );
+};
 
 export default AboutMe;

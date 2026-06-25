@@ -17,7 +17,8 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Sora', sans-serif;
     display: flex;
-    min-height: 100vh;
+    min-height: 100%;
+    height: 100%;
     width: 100%;
   }
 
@@ -25,9 +26,10 @@ const GlobalStyle = createGlobalStyle`
     background: linear-gradient(132deg, #E0E0E0, #96a7cf, #E0E0E0);
     background-size: 100% 100%;
     position: relative;
-    height: 100vh;
+    min-height: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     padding:0;
     margin:0px;
   }
@@ -53,6 +55,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   #__next {
+    min-height: 100%;
     flex: 1;
     display: flex;
     flex-direction: column;

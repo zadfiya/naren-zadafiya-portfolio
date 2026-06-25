@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
 
-const StyledLink = styled.a`
+const StyledLink = styled(NextLink)`
   color: inherit;
   ${({ theme, color }) => (color
     ? `color: ${get(theme, `colors.${color}.color`)}`
@@ -20,12 +20,10 @@ const StyledLink = styled.a`
 
 // eslint-disable-next-line import/prefer-default-export
 const Link = ({ children, href, ...props }) => (
-  <NextLink href={href} passHref>
-    {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-    <StyledLink {...props}>
-      {children}
-    </StyledLink>
-  </NextLink>
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <StyledLink href={href} {...props}>
+    {children}
+  </StyledLink>
 );
 
 Link.propTypes = {

@@ -4,9 +4,9 @@ import breakpointsMedia from '../../../../theme/util/breakpoints/breakpoints';
 const ContainerProjetos = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: justify;
-  height: 82vh;
-  overflow-y: scroll;
+  justify-content: flex-start;
+  min-height: 82vh;
+  overflow: visible;
 
     ${breakpointsMedia({
     md: css`
@@ -87,11 +87,12 @@ export const ProjetoPrincipal = styled.ul`
     }
 
     .arrow {
-      display: none;
+      display: initial;
+      width: 50px;
+      height: 45px;
 
     ${breakpointsMedia({
     md: css`
-      display: initial;
       border-radius: 50%;
       transform: rotate(45deg);
       transition: ease-in-out 0.3s;
@@ -242,10 +243,11 @@ export const ListaProjetos = styled.ul`
     }
 
     .arrow {
-      display: none;
+      display: initial;
+      width: 50px;
+      height: 45px;
     ${breakpointsMedia({
     md: css`
-      display: initial;
       border-radius: 50%;
       transform: rotate(45deg);
       transition: ease-in-out 0.3s;

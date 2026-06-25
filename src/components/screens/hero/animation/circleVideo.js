@@ -56,9 +56,9 @@ const ContainerAnimation = styled.div`
     }
 
     .circle {
-      display: none;
+      display: initial;
       position: absolute;
-      animation: none;
+      animation: rotation 10s infinite linear;
       width: 150px;
       height: 150px;
 
@@ -82,10 +82,6 @@ const ContainerAnimation = styled.div`
     }
     
     .arrow {
-      display: none;
-      
-    ${breakpointsMedia({
-    md: css`
       display: initial;
       position: absolute;
       top: 33%;
@@ -98,6 +94,10 @@ const ContainerAnimation = styled.div`
       stroke-dasharray: 42.7;
       stroke-dashoffset: 0;
       animation: 3s draw infinite alternate;
+      
+    ${breakpointsMedia({
+    md: css`
+      right: 30%;
     `,
   })}
     }

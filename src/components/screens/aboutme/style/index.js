@@ -78,6 +78,73 @@ const Container = styled.section`
   margin: 20px 0px;
 }
 
+.section_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.section_toggle {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1.5px solid #000000;
+  border-radius: 999px;
+  background: transparent;
+  color: #000000;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.8rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.section_toggle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000000;
+  transform: translateX(-102%);
+  transition: transform 0.22s ease;
+  z-index: -1;
+}
+
+.section_toggle:hover {
+  color: #ffffff;
+}
+
+.section_toggle:hover::before {
+  transform: translateX(0);
+}
+
+.section_toggle:active {
+  transform: translateY(1px);
+}
+
+.section_toggle:focus-visible {
+  outline: 2px dashed #000000;
+  outline-offset: 2px;
+}
+
+${breakpointsMedia({
+    md: css`
+    .section_header {
+      flex-wrap: nowrap;
+    }
+
+    .section_toggle {
+      padding: 0.4rem 1rem;
+      font-size: 0.8rem;
+    }
+  `,
+  })}
+
 .section_content {
   border-left: 2px solid black;
   padding-bottom: 0.4rem;
